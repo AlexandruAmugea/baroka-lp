@@ -1,0 +1,29 @@
+@mixin button ($color) {
+    padding: 15px 50px;
+    font-family: $Popins;
+    font-size: 16px;
+    border-radius: 30px;
+    background-color: $color;
+    text-transform: uppercase;
+    color: $white;
+}
+
+@mixin after-border($width, $color, $height) {
+    content: "";
+    position: absolute;
+    width: $width;
+    height: $height;
+    background: $color;
+}
+
+@mixin btn-media() {
+    color: $white;
+    border-radius: 0;
+    padding: 5px 15px;
+    font-size: 12px;
+}
+
+@mixin btn-media-hover {
+    color: #fff;
+    text-decoration: none;
+}

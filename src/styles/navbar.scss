@@ -1,0 +1,24 @@
+ul.navbar-lg {
+    float: right;
+}
+
+ul.navbar-lg li {
+    display: inline;
+}
+
+ul.navbar-lg li a {
+    color: $white;
+    padding: 10px 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: $Popins;
+    letter-spacing: 1.25px;
+}
+
+ul.navbar-lg li a:hover,
+ul.navbar-lg li a:focus,
+ul.navbar-lg li a:visited {
+    color: $white;
+    text-decoration: none;
+}

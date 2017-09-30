@@ -1,0 +1,91 @@
+.btn.btn-register {
+    background-color: $green;
+    padding: 10px 40px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: $white;
+}
+
+.btn.btn-step-callout {
+    @include button($black);
+}
+
+.btn.btn-form-submit {
+    @include button($green);
+}
+
+.btn-media-fb {
+    @include btn-media();
+    background-color: #5476bf;
+}
+
+.btn-media-fb img {
+    width: 15px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.btn-media-tw {
+    @include btn-media();
+    background-color: #2897e7;
+}
+
+.btn-media-tw img {
+    width: 15px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.btn-media-fb:hover,
+.btn-media-fb:focus,
+.btn-media-fb:visited,
+.btn-media-tw:hover,
+.btn-media-tw:focus,
+.btn-media-tw:visited {
+    @include btn-media-hover();
+}
+
+#exchange-form {
+    margin: 30px 0;
+}
+
+.input-wrapper {
+    padding: 15px;
+    border: 1px solid $green;
+    border-left-color: #23a58b;
+    border-top-color: #23a58b;
+    border-radius: 20px;
+}
+
+.input-wrapper input {
+    border: none;
+    box-shadow: none;
+    border-right: 2px solid $input-border;
+    padding-left: 30px;
+    width: 70%;
+}
+
+.input-wrapper select {
+    border: none;
+    box-shadow: none;
+    color: $black;
+    font-weight: 600;
+    padding-left: 10px;
+    width: 25%;
+}
+
+.input-wrapper input:focus,
+.input-wrapper input:visited,
+.input-wrapper input:hover, 
+.input-wrapper input:active, 
+.input-wrapper select:focus,
+.input-wrapper select:visited,
+.input-wrapper select:hover,
+.input-wrapper select:active {
+    border: none;
+    box-shadow: none;
+}
+
+textarea:focus, input:focus, select:focus, button:focus, a:focus{
+    outline: none;
+}
