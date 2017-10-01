@@ -16,55 +16,9 @@ section.form-exchange {
     background-color: $green;
 }
 
-.section-payment-green ul {
-    margin: 0 auto;
-    max-width: 570px;
-}
-
-.section-payment-green ul li {
-    color: $white;
-    display: inline;
-    list-style: none;
-    margin: 0 auto;
-    font-size: 15px;
-    text-transform: uppercase;
-    margin-left: 15px;
-}
-
-.section-payment-green ul li img {
-    padding-right: 10px;
-    margin-top: -5px;
-}
-
-.section-payment-green ul li span {
-    padding-left: 15px;
-    border-left: 2px solid $white;
-}
-
 .section-visa {
     background-color: $dark-blue;
     padding: 8px 0;
-}
-
-.section-visa ul {
-    margin: 0 auto;
-    max-width: 540px;
-}
-
-.section-visa ul li {
-    display: inline;
-    color: $white;
-    margin-right: 10px;
-    font-size: 10px;
-    font-weight: 200;
-}
-
-.section-visa ul li:last-child {
-    margin-right: 0;
-}
-
-.section-visa ul li img {
-    margin-right: 5px;
 }
 
 .section-steps {
@@ -221,4 +175,85 @@ section.form-exchange {
     @include after-border(70px, $green, 3px);
     left: calc(50% - 35px);
     bottom: -10px;
+}
+
+.section-bitcoin {
+    background: url('~/images/bitcoin-bg.png') no-repeat left top;
+    background-size: cover;
+    padding: 130px 0;
+}
+
+.section-bitcoin h2 {
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 600;
+    font-size: 60px;
+    margin: 0 0 15px;
+}
+
+.section-bitcoin h3 {
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 300;
+    font-size: 33px;
+    margin: 0 0 50px;
+}
+
+.section-journals {
+    padding: 50px 80px;
+    background: $light-grey ;
+}
+
+.section-journals h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.section-journals h2:after {
+    @include after-border(70px, $green, 3px);
+    left: calc(50% - 35px);
+    bottom: -10px;
+}
+
+.section-connect {
+    background: $white;
+    padding: 40px 0;
+}
+
+.section-connect h2 {
+    text-align: right;
+    color: $black;
+    border-right: 2px solid $green;
+    padding: 25px 30px;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-right: -15px;
+}
+
+footer {
+    background: url('~/images/footer-bg.png');
+    background-size: cover;
+    padding: 40px 0 15px;
+}
+
+footer hr {
+    border: none;
+    border-bottom: 1px solid #474e5b;
+    margin: 30px 0;
+}
+
+footer p {
+    font-size: 9px;
+    font-weight: 400;
+    color: $white;
+    text-align: center;
+    margin: 0;
+}
+
+#exchange-form {
+    margin: 30px 0;
 }
