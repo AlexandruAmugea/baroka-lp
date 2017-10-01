@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ExtractSASS = new ExtractTextPlugin('styles/bundle.css');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (options) => {
   const dest = Path.join(__dirname, 'dist');
@@ -27,7 +28,10 @@ module.exports = (options) => {
       }),
       new HtmlWebpackPlugin({
         template: './src/index.html'
-      })
+      }),
+      new CopyWebpackPlugin([
+        { from: 'src/images', to: 'images' }
+      ])
     ],
     module: {
       rules: [{
