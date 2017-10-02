@@ -14,11 +14,18 @@ ul.navbar-lg li a {
     font-size: 13px;
     font-family: $Popins;
     letter-spacing: 1.25px;
+    transition: .25s all ease;
 }
 
 ul.navbar-lg li a:hover,
-ul.navbar-lg li a:focus,
-ul.navbar-lg li a:visited {
+ul.navbar-lg li a:focus {
+    color: $green;
+    text-decoration: none;
+    transition: .25s all ease;
+}
+
+ul.navbar-lg li:last-child a:hover,
+ul.navbar-lg li:last-child a:focus {
     color: $white;
     text-decoration: none;
 }
@@ -82,6 +89,13 @@ ul.navbar-lg li a:visited {
 
 .mobile-menu ul.navbar-lg li a {
     color: $black;
+    transition: .25s all ease;
+}
+
+.mobile-menu ul.navbar-lg li a:hover,
+.mobile-menu ul.navbar-lg li a:focus {
+    color: $green;
+    transition: .25s all ease;
 }
 
 .mobile-menu ul.navbar-lg li:last-child a{

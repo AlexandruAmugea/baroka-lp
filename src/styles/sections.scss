@@ -44,6 +44,36 @@ section.form-exchange {
     clear: both;
 }
 
+.image-tile {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    z-index: 130;
+    text-align: center;
+}
+
+.image-tile.active {
+    display: block;
+}
+
+.phone-wrapper {
+    position: relative;
+}
+
+.tile-steps.active {
+    background: darken($light-grey, 10%);
+}
+
+.tile-steps:hover {
+    cursor: pointer;
+    background: darken($light-grey, 10%);
+    transition: .25s all ease;
+}
+
 .tile-steps .left {
     float: left;
     width: 10%;
