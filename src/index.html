@@ -4,32 +4,61 @@
   <meta charset="UTF-8">
   <title>Baroka</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,400,600,600i,700,700i,800,800i,900" rel="stylesheet">
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+
+<div id="external-wrapper"></div>  
 <header>
-  <div class="container">
-      <div class="row">
-        <div class="col-sx-12">
-          <nav>
-            <div class="row">
-              <div class="col-xs-12 col-sm-3">
-                <img src="images/logo.png" alt="" class="pull-left">
-              </div>
-              <div class="col-xs-12 col-sm-9">
-                <ul class="navbar-lg">
-                  <li><a href="">How it works</a></li>
-                  <li><a href="">Faq</a></li>
-                  <li><a href="">What is bitcoin</a></li>
-                  <li><a href="">Login</a></li> 
-                  <li><a href="" class="btn btn-register">Register</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+  <nav class="mobile-menu">
+    <a id="sidenav-button--slide-left" class="ln-menu sidenav-button--slide-left" href="javascript:void(0)">
+      <svg height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+      </svg>
+    </a>
+    <div class="mobile-menu-wrapper">
+        <div class="text-center">
+          <a href="javascript:void(0)" class="sidenav-menu__close ln-close">
+              <svg width="24px" height="24px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g stroke="none" stroke-width="1" fill="#000" fill-rule="evenodd">
+                  <g transform="translate(-35.000000, -42.000000)">
+                    <polygon points="53 49.875 39.3087499 49.875 45.5975 43.5862498 44 42 35 51 44 60 45.5862498 58.4137501 39.3087499 52.125 53 52.125"></polygon>
+                  </g>
+                </g>
+              </svg>
+            </a>
         </div>
-      </div>
+        <br> 
+        <ul class="navbar-lg">
+          <li><a href="">How it works</a></li>
+          <li><a href="">Faq</a></li>
+          <li><a href="">What is bitcoin</a></li>
+          <li><a href="">Login</a></li> 
+          <li><a href="" class="btn btn-register">Register</a></li>
+        </ul>
+    </div>  
+  </nav>
+  <div class="container">
+      <nav>
+        <div class="row">
+          <div class="col-xs-12 col-sm-3">
+            <img src="images/logo.png" alt="" class="pull-left logo">
+          </div>
+          <div class="col-xs-12 col-sm-9">
+            <ul class="navbar-lg">
+              <li><a href="">How it works</a></li>
+              <li><a href="">Faq</a></li>
+              <li><a href="">What is bitcoin</a></li>
+              <li><a href="">Login</a></li> 
+              <li><a href="" class="btn btn-register">Register</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
           <h1 class="text-center">Buroka makes it <strong>safe</strong> & <strong>easy</strong> to
@@ -39,6 +68,7 @@
       </div>
     </div>
 </header>
+
 <section class="form-exchange">
   <div class="container">
     <div class="row">
@@ -46,7 +76,7 @@
         <p class="text-center">Buy and sell bitcoin in seconds by bank transfer, card or direct deposit</p>
         <form action="" method="post" id="exchange-form">
             <div class="row">
-              <div class="col-sm-5">
+              <div class="col-xs-12 col-sm-5">
                 <div class="input-wrapper">
                   <input type="number" placeholder="from: [1000 NGN]">
                   <select name="" id="">
@@ -55,7 +85,7 @@
                   </select>
                 </div>
               </div>
-              <div class="col-sm-5">
+              <div class="col-xs-12 col-sm-5">
                 <div class="input-wrapper">
                   <input type="number" placeholder="from: [1000 NGN]">
                   <select name="" id="">
@@ -64,7 +94,7 @@
                     </select>
                 </div>
               </div>
-              <div class="col-sm-2">
+              <div class="col-xs-12 col-sm-2">
                 <button type="submit" class="btn btn-form-submit pull-right">Exchange</button>
               </div>
             </div>
@@ -257,7 +287,7 @@
 
 <section class="section-journals text-center">
   <h2>As seen in</h2>
-  <img src="images/journals-bg.png" alt="">
+  <img src="images/journals-bg.png" class="img-responsive" alt="">
 </section>
 
 <section class="section-connect">

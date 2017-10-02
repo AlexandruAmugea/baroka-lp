@@ -6,3 +6,6 @@ if (module.hot) {
 
 import 'babel-polyfill';
 import '../styles/index.scss';
+import menu from './mobile-menu';
+
+menu.initMobileMenu();

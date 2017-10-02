@@ -1,0 +1,147 @@
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) { 
+
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 30px 0 20px;
+    }
+    .pull-left.logo {
+        float: none !important;
+        margin: 0 auto;
+        width: 150px;
+        height: auto;
+        display: block;
+    }
+
+    ul.navbar-lg {
+        display: none;
+    }
+
+    .mobile-menu ul.navbar-lg {
+        display: block;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .input-wrapper {
+        margin-bottom: 30px;
+    }
+
+    .btn.btn-form-submit.pull-right {
+        float: none !important;
+        margin: 0 auto;
+        width: 200px;
+        display: block;
+    }
+
+    section.form-exchange {
+        padding: 30px 0;
+    }
+
+    .section-payment-green ul {
+        padding: 0;
+    }
+
+    .section-payment-green {
+        padding: 10px 0;
+    }
+
+    .section-payment-green ul li span {
+        font-size: 13px;
+        padding: 0;
+        border: none;
+    }
+
+    .section-payment-green ul li img {
+        height: 16px;
+        width: auto;
+        margin-right: 5px;
+        padding-right: 0px;
+    }
+
+    .section-steps h3 {
+        font-size: 36px;
+    }
+
+    .section-steps img {
+        display: none;
+    }
+
+    .section-city {
+        padding: 30px;
+    }
+
+    .section-city h4 {
+        font-size: 24px;
+    }
+
+    .section-feedback {
+        padding: 30px 15px;
+    }
+
+    .section-feedback h4 {
+        font-size: 24px;
+    }
+
+    .section-bitcoin {
+        padding: 30px;
+    }
+
+    .section-bitcoin h2 {
+        font-size: 32px;
+    }
+
+    .media-wrapper .btn-media {
+        top: 5px;
+    }
+
+    .section-bitcoin h3 {
+        font-size: 28px;
+    }
+
+    .section-connect h2 {
+        margin: 0;
+        border: none;
+        text-align: center;
+    }
+
+    .social-connect {
+        margin: 0 auto;
+        max-width: 300px;
+    }
+
+    .section-connect {
+        padding: 30px 0;
+    }
+
+    dl {
+        text-align: center;
+    }
+}

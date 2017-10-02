@@ -212,6 +212,10 @@ section.form-exchange {
     margin-bottom: 30px;
 }
 
+.section-journals img {
+    margin: 0 auto;
+}
+
 .section-journals h2:after {
     @include after-border(70px, $green, 3px);
     left: calc(50% - 35px);

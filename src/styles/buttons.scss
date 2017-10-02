@@ -6,12 +6,30 @@
     color: $white;
 }
 
+.btn.btn-register:hover,
+.btn.btn-register:focus {
+    background-color: lighten($green, 5%);
+    transition: .25s all ease;
+}
+
 .btn.btn-step-callout {
-    @include button($black);
+    @include button($dark-blue );
+}
+
+.btn.btn-step-callout:hover,
+.btn.btn-step-callout:focus {
+    background-color: lighten($dark-blue , 5%);
+    transition: .25s all ease;
 }
 
 .btn.btn-form-submit {
     @include button($green);
+}
+
+.btn.btn-form-submit:hover,
+.btn.btn-form-submit:focus {
+    background-color: lighten($green , 5%);
+    transition: .25s all ease;
 }
 
 .btn-media-fb {
