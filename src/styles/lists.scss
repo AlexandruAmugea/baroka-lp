@@ -99,6 +99,7 @@
      -ms-filter: grayscale(100%);
          filter: grayscale(100%); 
     transition: .25s all ease;
+    opacity: 0.5;
 }
 
 .section-journals ul li a:hover img {
@@ -108,4 +109,5 @@
      -ms-filter: grayscale(0%);
          filter: grayscale(0%); 
     transition: .25s all ease;     
+    opacity: 1;
 }

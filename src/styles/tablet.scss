@@ -80,6 +80,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-@media only screen and (max-device-width: 1024px) {
-    
+@media (max-device-width: 1280px) {
+    .section-journals ul li img {
+        height: 20px;
+    }
 }
