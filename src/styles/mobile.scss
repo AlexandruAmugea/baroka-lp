@@ -157,4 +157,9 @@ and (orientation: landscape) {
     .section-journals {
         padding: 15px 15px 30px;
     }
+
+    .section-journals ul li {
+        display: block;
+        text-align: center;
+    }
 }
