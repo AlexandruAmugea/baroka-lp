@@ -185,4 +185,20 @@ and (orientation: landscape) {
     .section-visa ul li {
         display: block;
     }
+
+    .input-wrapper-sell {
+        margin-right: 0;
+    }
+    
+    .input-wrapper-get {
+        margin-left: 0;
+    }
+
+    .exchange-arrows {
+        display: none;
+    }
+
+    #exchange-form .btn-group, .btn-group-vertical {
+        position: static;
+    }
 }

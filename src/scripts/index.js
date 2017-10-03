@@ -10,36 +10,20 @@ import menu from './mobile-menu';
 import steps from './steps.js';
 import angular from 'angular';
 import dropdown from 'angular-ui-bootstrap/src/dropdown/index-nocss.js';
+import modal from 'angular-ui-bootstrap/src/modal/index-nocss.js';
 
 menu.initMobileMenu();
 steps.initSteps();
 
 var app = angular.module('buroka', [
-  dropdown
+  dropdown,
+  modal
 ]);
 
 // Exchange form controller
 (function(){
   app.controller('exchangeFormCtrl', ['$scope', 'exchangeFactory', function($scope, exchangeFactory){
-    $scope.currency = {
-      sell: {
-        selected: {
-          'shortName': 'BTN', 
-          'name': 'Bitcoin',
-        }
-      },
-      get: {
-        selected: {
-          'shortName': 'USD', 
-          'name': 'US Dollar',
-        }
-      },
-      all: [
-        {'shortName': 'BTN', 'name': 'Bitcoin', 'imageClass': 'BTC'},
-        {'shortName': 'USD', 'name': 'US Dollar', 'imageClass': 'BTC'},
-        {'shortName': 'ETH', 'name': 'Ethereum', 'imageClass': 'ETH'},
-      ]
-    };
+    $scope.currency = exchangeFactory.getCurrencies();
     $scope.input = {
       sell: 0,
       get: 0
@@ -72,9 +56,25 @@ var app = angular.module('buroka', [
     }
 
     function getCurrencies(){
-      return [
-        { currency: "BTN"}
-      ];
+      return {
+        sell: {
+          selected: {
+            'shortName': 'BTN', 
+            'name': 'Bitcoin',
+          }
+        },
+        get: {
+          selected: {
+            'shortName': 'USD', 
+            'name': 'US Dollar',
+          }
+        },
+        all: [
+          {'shortName': 'BTN', 'name': 'Bitcoin', 'imageClass': 'BTC'},
+          {'shortName': 'USD', 'name': 'US Dollar', 'imageClass': 'BTC'},
+          {'shortName': 'ETH', 'name': 'Ethereum', 'imageClass': 'ETH'},
+        ]
+      };
     }
     
   }]);
