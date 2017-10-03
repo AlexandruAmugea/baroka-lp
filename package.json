@@ -1,7 +1,7 @@
 {
-  "name": "yet-another-webpack-es6-starterkit",
+  "name": "baroka",
   "version": "1.0.0",
-  "description": "A light foundation for your next frontend project based on webpack.",
+  "description": "BUROKA MAKES IT SAFE & EASY TO BUY AND SELL BITCOIN IN NIGERIA",
   "scripts": {
     "build": "webpack --config webpack-prod.config.js --colors",
     "dev": "webpack-dev-server --open --config webpack-dev.config.js --watch --colors"
@@ -11,17 +11,14 @@
     "url": "git+https://github.com/wbkd/yet-another-webpack-es6-starterkit.git"
   },
   "keywords": [
-    "webpack",
-    "startkit",
-    "frontend",
-    "es6",
-    "javascript",
-    "webdev"
+    "Bitcoin",
+    "Crypto",
+    "Currency"
   ],
-  "author": "webkid.io",
+  "author": "Alexandru Amugea",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wbkd/yet-another-webpack-es6-starterkit/issues"
+    "url": "https://github.com/AlexandruAmugea/baroka-lp/issues"
   },
   "eslintConfig": {
     "env": {
@@ -36,7 +33,7 @@
       "semi": 2
     }
   },
-  "homepage": "https://github.com/wbkd/yet-another-webpack-es6-starterkit#readme",
+  "homepage": "https://github.com/AlexandruAmugea/baroka-lp/blob/master/README.md",
   "devDependencies": {
     "babel-core": "^6.9.0",
     "babel-loader": "^7.1.2",
