@@ -1,5 +1,5 @@
 .input-wrapper {
-    padding: 15px;
+    padding: 1px;
     border: 1px solid $green;
     border-left-color: #23a58b;
     border-top-color: #23a58b;
@@ -9,9 +9,11 @@
 .input-wrapper input {
     border: none;
     box-shadow: none;
-    border-right: 2px solid $input-border;
     padding-left: 30px;
     width: 70%;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    padding: 20px;
 }
 
 .input-wrapper select {
