@@ -21,6 +21,14 @@
     padding-left: 100px;
 }
 
+.input-wrapper-sell {
+    margin-right: 30px;
+}
+
+input-wrapper-get {
+    margin-left: 30px;
+}
+
 .input-wrapper-sell:after {
     content: "You have";
     display: block;
@@ -111,4 +119,12 @@ html input[disabled] {
 
 .input-wrapper .dropdown-menu>li>a {
     padding: 8px 20px 0;
+}
+
+.exchange-arrows {
+    position: absolute;
+    color: $black;
+    right: -44px;
+    top: 10px;
+    font-size: 28px;
 }
