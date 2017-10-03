@@ -63,3 +63,21 @@
     @include btn-media-hover();
 }
 
+#exchange-form .btn-group, .btn-group-vertical {
+    width: 29.5%;
+    position: relative;
+    height: 54px;
+    box-shadow: none;
+    border-left: 1px solid $green;
+}
+
+.btn.btn-select {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 18px 18px 0;
+    font-size: 24px;
+}
+
+.btn.btn-select:focus {
+    box-shadow: none;
+}

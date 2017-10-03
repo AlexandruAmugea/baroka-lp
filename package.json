@@ -36,6 +36,7 @@
   "homepage": "https://github.com/AlexandruAmugea/baroka-lp/blob/master/README.md",
   "devDependencies": {
     "angular": "^1.6.6",
+    "angular-ui-bootstrap": "^2.5.0",
     "babel-core": "^6.9.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.9.0",

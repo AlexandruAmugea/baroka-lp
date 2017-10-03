@@ -69,7 +69,7 @@
     </div>
 </header>
 
-<section class="form-exchange" ng-controller="exchangeFormCtrl">
+<section class="form-exchange" ng-controller="exchangeFormCtrl" ng-cloak>
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-12">
@@ -77,21 +77,37 @@
         <form action="" method="post" id="exchange-form">
             <div class="row">
               <div class="col-xs-12 col-sm-5">
-                <div class="input-wrapper">
-                  <input type="text" placeholder="from: [1000 NGN]" maxlength="7" ng-model="currency.sell">
-                  <select name="" id="">
-                    <option value="">BTN</option>
-                    <option value="">NGN</option>
-                  </select>
+                <div class="input-wrapper input-wrapper-sell">
+                  <input type="text" placeholder="" maxlength="7" ng-model="input.sell">
+                  <div class="btn-group" uib-dropdown is-open="false">
+                      <button id="single-button" type="button" class="btn btn-select" uib-dropdown-toggle ng-disabled="disabled">
+                        {{currency.sell.selected.shortName}} <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                        <li role="menuitem" ng-repeat="c in currency.all"><a href="" ng-click="changeSellCurrency(c)">
+                          <span class="currency-symbol">{{c.shortName}} </span>
+                          <span class="currency-img"><i class="cc {{c.imageClass}}" title="{{c.shortName}}"></i></span>
+                          <span class="currency-name">{{c.name}}</span>
+                          </a></li>
+                      </ul>
+                    </div>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-5">
-                <div class="input-wrapper">
-                  <input type="number" placeholder="from: [1000 NGN]" ng-disabled="true" ng-model="currency.get">
-                  <select name="" id="">
-                      <option value="">BTN</option>
-                      <option value="">NGN</option>
-                    </select>
+                <div class="input-wrapper input-wrapper-get">
+                  <input type="number" placeholder="" ng-disabled="true" ng-model="input.get">
+                  <div class="btn-group" uib-dropdown is-open="false">
+                      <button id="single-button" type="button" class="btn btn-select" uib-dropdown-toggle ng-disabled="disabled">
+                        {{currency.get.selected.shortName}} <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                          <li role="menuitem" ng-repeat="c in currency.all"><a href="" ng-click="changeGetCurrency(c)">
+                            <span class="currency-symbol">{{c.shortName}} </span>
+                            <span class="currency-img"><i class="cc {{c.imageClass}}" title="{{c.shortName}}"></i></span>
+                            <span class="currency-name">{{c.name}}</span>
+                            </a></li>
+                        </ul>
+                    </div>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-2">

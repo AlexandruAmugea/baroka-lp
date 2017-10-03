@@ -16,3 +16,12 @@ p {
     font-weight: 300;
     color: $black;
 }
+
+.input-wrapper i.cc { 
+    font-size: 2rem; 
+    display: inline-block; 
+    margin: 0 1.3rem 1.3rem 0; 
+    transition: 0.1s ease all; 
+    color: $green;
+}
+

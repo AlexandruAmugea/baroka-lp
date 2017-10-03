@@ -4,16 +4,46 @@
     border-left-color: #23a58b;
     border-top-color: #23a58b;
     border-radius: 20px;
+    position: relative;
 }
 
 .input-wrapper input {
     border: none;
     box-shadow: none;
     padding-left: 30px;
-    width: 70%;
+    width: 70.5%;
     border: none;
-    border-radius: 20px 0 0 20px;
-    padding: 20px;
+    border-radius: 18px 0 0 18px;
+    padding: 13px 21px;
+    background: #fff;
+    float: left;
+    font-size: 20px;
+    padding-left: 100px;
+}
+
+.input-wrapper-sell:after {
+    content: "You have";
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    font-size: 15px;
+    color: $green;
+    z-index: 100;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.input-wrapper-get:after {
+    content: "You get";
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    font-size: 15px;
+    color: $green;
+    z-index: 100;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .input-wrapper select {
@@ -39,4 +69,46 @@
 
 textarea:focus, input:focus, select:focus, button:focus, a:focus{
     outline: none;
+}
+
+html input[disabled] {
+    background-color: $darker-white;
+}
+
+.input-wrapper .dropdown-menu {
+    min-width: 200px;
+}
+
+.input-wrapper .dropdown-menu li a span.currency-symbol {
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 30px;
+    width: 50px;
+}
+
+.input-wrapper .dropdown-menu li {
+    border-bottom: 1px solid $light-grey;
+}
+
+.input-wrapper .dropdown-menu li a span.currency-img {
+    margin: 0px;
+    width: 50px;
+    text-align: center;
+}
+
+.input-wrapper .dropdown-menu li a span.currency-name {
+    font-weight: 300;
+    font-size: 18px;
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+    
+}
+
+.input-wrapper .dropdown-menu li a span {
+    display: inline-block;
+}
+
+.input-wrapper .dropdown-menu>li>a {
+    padding: 8px 20px 0;
 }
