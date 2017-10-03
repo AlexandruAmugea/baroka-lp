@@ -162,4 +162,27 @@ and (orientation: landscape) {
         display: block;
         text-align: center;
     }
+
+    .tile-steps .right {
+        width: 80%;
+    }
+
+    .tile-steps .left {
+        width: 20%;
+    }
+
+    .section-visa ul li img {
+        display: block;
+        width: 50px;
+        margin: 0 auto 5px;
+    }
+
+    .section-visa ul {
+        padding: 0;
+        text-align: center;
+    }
+
+    .section-visa ul li {
+        display: block;
+    }
 }
