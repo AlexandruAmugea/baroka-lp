@@ -22,6 +22,8 @@
     & h1 {
         color: $black;
         text-align: center;
+        text-transform: none;
+        font-weight: 200;
     }
 }
 
@@ -35,9 +37,10 @@
 }
 
 .register-poup--body .btn {
-    width: 200px;
+    width: 300px;
     margin-top: 20px;
     border-radius: 0px;
+    padding: 10px 0;
 }
 
 .register-poup--body .register-poup--close-btn {
@@ -50,4 +53,10 @@
 
 .register-poup--body .register-poup--close-btn:hover {
     cursor: pointer;
+}
+
+.register-poup--body .btn.btn-step-callout {
+    background: transparent;
+    border: 1px solid $green;
+    color: $green;
 }
