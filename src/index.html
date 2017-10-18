@@ -12,6 +12,7 @@
 
 
 <div id="external-wrapper"></div>  
+<div id="pop-up-wrapper"></div>
 <header>
   <nav class="mobile-menu">
     <a id="sidenav-button--slide-left" class="ln-menu sidenav-button--slide-left" href="javascript:void(0)">
@@ -112,7 +113,7 @@
                 </div>
               </div>
               <div class="col-xs-12 col-sm-2">
-                <button type="submit" class="btn btn-form-submit pull-right">Exchange</button>
+                <button type="button" class="btn btn-form-submit pull-right" ng-click="submit()">Exchange</button>
               </div>
             </div>
         </form>
@@ -372,6 +373,7 @@
   <hr>
   <p>© 2017 buroka. All rights reserved | GRAPHORIC</p>
 </footer>
+<register-popup opened="true"></register-popup>
 </body>
 </body>
 </html>

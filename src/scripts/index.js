@@ -22,7 +22,7 @@ var app = angular.module('buroka', [
 
 // Exchange form controller
 (function(){
-  app.controller('exchangeFormCtrl', ['$scope', 'exchangeFactory', function($scope, exchangeFactory){
+  app.controller('exchangeFormCtrl', ['$scope', '$rootScope', 'exchangeFactory', function($scope, $rootScope, exchangeFactory){
     $scope.currency = exchangeFactory.getCurrencies();
     $scope.input = {
       sell: 0,
@@ -40,6 +40,13 @@ var app = angular.module('buroka', [
     $scope.$watch('input.sell', function(val){
       $scope.input.get = exchangeFactory.calculateCurrency(val);
     });
+
+    $scope.openRegisterPopup = false;
+
+    $scope.submit = function(){
+      $rootScope.$emit('open:registerPopup');
+    };
+
   }]);
 }());
 
@@ -78,5 +85,41 @@ var app = angular.module('buroka', [
     }
     
   }]);
+}());
+
+(function(){
+  app.directive('registerPopup', function(){
+    return {
+      scope: {
+        opened: "@"
+      },
+      restric: "AE",
+      template: '<div class="register-poup--wrapper" ng-class="{ active : opened === true}" ng-click="close()"></div>'
+       + '<div class="register-poup--body text-center" ng-class="{ active : opened === true}">'
+       + '<span class="register-poup--close-btn" ng-click="close()">x</span>'
+       + '<h1>Hello!</h1>'
+       + '<button type="button" class="btn btn-form-submit" ng-click="register()">Register</button></br>'
+       + '<button type="button" class="btn btn-step-callout" ng-click="signIng">Sign in</button>'
+       + '</div>',
+      controller: ['$scope', '$rootScope', function($scope, $rootScope) {
+
+        $rootScope.$on('open:registerPopup', function(){
+          $scope.opened = true;
+        });
+
+        $scope.signIn = function(){
+          
+        };
+
+        $scope.register = function(){
+
+        };
+
+        $scope.close = function(){
+          $scope.opened = !$scope.opened;
+        };
+      }]
+    };
+  });
 }());
 

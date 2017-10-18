@@ -1,0 +1,53 @@
+.register-poup--wrapper {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.register-poup--body {
+    position: absolute; 
+    left: 0;
+    top: -500px;
+    transition: .5s all ease;
+    width: 100%;
+    height: 300px;
+    background: $white;
+    z-index: 1001;
+
+    & h1 {
+        color: $black;
+        text-align: center;
+    }
+}
+
+.register-poup--wrapper.active {
+    display: block;
+}
+
+.register-poup--body.active {
+    top: calc(50% - 150px);
+    transition: .5s all ease;
+}
+
+.register-poup--body .btn {
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 0px;
+}
+
+.register-poup--body .register-poup--close-btn {
+    font-size: 30px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    color: $light-grey;
+}
+
+.register-poup--body .register-poup--close-btn:hover {
+    cursor: pointer;
+}
