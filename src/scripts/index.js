@@ -98,8 +98,8 @@ var app = angular.module('buroka', [
        + '<div class="register-poup--body text-center" ng-class="{ active : opened === true}">'
        + '<span class="register-poup--close-btn" ng-click="close()">x</span>'
        + '<h1>Hello!</h1>'
-       + '<button type="button" class="btn btn-form-submit" ng-click="register()">Register</button></br>'
-       + '<button type="button" class="btn btn-step-callout" ng-click="signIng">Sign in</button>'
+       + '<button type="button" class="btn btn-form-submit" ng-click="register()">I\'m a new user</button></br>'
+       + '<button type="button" class="btn btn-step-callout" ng-click="signIng">I already have an account</button>'
        + '</div>',
       controller: ['$scope', '$rootScope', function($scope, $rootScope) {
 
