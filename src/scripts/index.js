@@ -103,8 +103,18 @@ var app = angular.module('buroka', [
        + '</div>',
       controller: ['$scope', '$rootScope', function($scope, $rootScope) {
 
+        function scrollAndBlock(){
+          window.scrollTo( 0, 0 );
+          document.getElementsByTagName('body')[0].style.overflow = 'hidden'; 
+        }
+
+        function unblockBody(){
+          document.getElementsByTagName('body')[0].style.overflow = 'auto'; 
+        }
+
         $rootScope.$on('open:registerPopup', function(){
           $scope.opened = true;
+          scrollAndBlock();
         });
 
         $scope.signIn = function(){
@@ -117,6 +127,7 @@ var app = angular.module('buroka', [
 
         $scope.close = function(){
           $scope.opened = !$scope.opened;
+          unblockBody();
         };
       }]
     };
