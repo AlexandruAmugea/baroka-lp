@@ -50,9 +50,12 @@ exports.initTabMenuFaq = function initTabMenuFaq(){
                 });
             });
         };
-
-        goBackToTop();
-        setClick();
-        initFirstTime();
+        
+        // Check if elements are on the page and start 
+        if(menuElements.length > 0 && sections.length > 0) {
+            goBackToTop();
+            setClick();
+            initFirstTime();
+        }
     };
     
