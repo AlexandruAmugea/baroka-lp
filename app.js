@@ -38,7 +38,7 @@ app.get('/anti-fraud-policy', function(req, res){
 })
 
 app.get('/aml-kyc-policy', function(req, res){
-    res.sendFile(__dirname + "/aml-kyc-policy.html");
+    res.sendFile(__dirname + "/dist/aml-kyc-policy.html");
 })
 
 app.listen(port);
