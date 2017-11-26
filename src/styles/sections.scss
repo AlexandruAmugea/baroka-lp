@@ -316,6 +316,7 @@ footer p {
         margin-top: 530px;
         text-transform: uppercase;
         position: relative;
+        color: #1a1c2b;
 
         &:after {
             content: "";
@@ -357,6 +358,7 @@ footer p {
         width: 510px;
         margin-top: 410px;
         text-transform: uppercase;
+        color: #1a1c2b;
     }
 
     & p {
@@ -383,11 +385,99 @@ footer p {
         font-weight: 100;
         text-transform: uppercase;
         margin-bottom: 30px;
+        color: #1a1c2b;
     }
     & p {
         font-size: 20px;
     }
     & img {
         margin-top: -50px;
+    }
+}
+
+.section-change-value {
+    background: url("~/images/wib/pattern-4.png") no-repeat left top, #f3f3f3;
+    padding: 50px 0 100px;
+    & h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 80px;
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        color: $black;
+        font-weight: 600;
+        width: 500px;
+        margin-top: 530px;
+        text-transform: uppercase;
+        position: relative;
+        line-height: 0.75;
+        color: #1a1c2b;
+
+        & span {
+            font-size: 48px;
+            font-weight: 400;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: -30px;
+            bottom: -35px;
+            height: 25px;
+            width: 150px;
+            background:#3f414d;
+        }
+    }
+
+    & p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    & img {
+        margin-bottom: 30px;
+    }
+}
+
+.section-why-use {
+    background: url("~/images/wib/btn-bg.jpg") no-repeat left top, #f3f3f3;
+    background-size: cover;
+    padding: 225px 0;
+    & h3 {
+        font-size: 80px;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 100;
+        margin-bottom: 60px;
+
+        strong {
+            font-weight: 600;
+        }
+    }
+
+    & p {
+        font-size: 20px;
+        margin-bottom: 30px;
+        color: $white;
+    }
+}
+
+.section-investment {
+    background: url("~/images/wib/pattern-5.jpg") no-repeat left top,
+    url("~/images/wib/pattern-6.jpg") no-repeat right top, #f3f3f3;
+    padding: 50px 0 100px;
+    & h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 80px;
+        transform-origin: left top;
+        color: $black;
+        font-weight: 100;
+        text-transform: uppercase;
+        color: #1a1c2b;
+    }
+
+    & p {
+        font-size: 20px;
+        margin-bottom: 30px;
     }
 }
