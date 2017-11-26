@@ -22,7 +22,7 @@ app.get('/privacy-policy', function(req, res){
 })
 
 app.get('/refund', function(req, res){
-    res.sendFile(__dirname + "/dist/refund.html");
+    res.sendFile(__dirname + "/dist/refund-and-return-policy.html");
 })
 
 app.get('/risk-warning', function(req, res){
@@ -35,6 +35,10 @@ app.get('/terms', function(req, res){
 
 app.get('/anti-fraud-policy', function(req, res){
     res.sendFile(__dirname + "/dist/anti-fraud-policy.html");
+})
+
+app.get('/aml-kyc-policy', function((req, res){
+    res.sendFile(__dirname + "/aml-kyc-policy.html");
 })
 
 app.listen(port);
