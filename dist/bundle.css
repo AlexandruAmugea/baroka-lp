@@ -1100,7 +1100,8 @@ footer p {
     width: 410px;
     margin-top: 530px;
     text-transform: uppercase;
-    position: relative; }
+    position: relative;
+    color: #1a1c2b; }
     .section-what h4:after {
       content: "";
       position: absolute;
@@ -1130,7 +1131,8 @@ footer p {
     font-weight: 100;
     width: 510px;
     margin-top: 410px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #1a1c2b; }
   .section-safe p {
     font-size: 20px; }
 
@@ -1150,11 +1152,78 @@ footer p {
     color: #000000;
     font-weight: 100;
     text-transform: uppercase;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    color: #1a1c2b; }
   .section-dollar p {
     font-size: 20px; }
   .section-dollar img {
     margin-top: -50px; }
+
+.section-change-value {
+  background: url("/images/wib/pattern-4.png") no-repeat left top, #f3f3f3;
+  padding: 50px 0 100px; }
+  .section-change-value h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    color: #000000;
+    font-weight: 600;
+    width: 500px;
+    margin-top: 530px;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 0.75;
+    color: #1a1c2b; }
+    .section-change-value h4 span {
+      font-size: 48px;
+      font-weight: 400; }
+    .section-change-value h4:after {
+      content: "";
+      position: absolute;
+      left: -30px;
+      bottom: -35px;
+      height: 25px;
+      width: 150px;
+      background: #3f414d; }
+  .section-change-value p {
+    font-size: 20px;
+    margin-bottom: 30px; }
+  .section-change-value img {
+    margin-bottom: 30px; }
+
+.section-why-use {
+  background: url("/images/wib/btn-bg.jpg") no-repeat left top, #f3f3f3;
+  background-size: cover;
+  padding: 225px 0; }
+  .section-why-use h3 {
+    font-size: 80px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    margin-bottom: 60px; }
+    .section-why-use h3 strong {
+      font-weight: 600; }
+  .section-why-use p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ffffff; }
+
+.section-investment {
+  background: url("/images/wib/pattern-5.jpg") no-repeat left top, url("/images/wib/pattern-6.jpg") no-repeat right top, #f3f3f3;
+  padding: 50px 0 100px; }
+  .section-investment h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
+    transform-origin: left top;
+    color: #000000;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #1a1c2b; }
+  .section-investment p {
+    font-size: 20px;
+    margin-bottom: 30px; }
 
 body {
   font-family: "Poppins", sans-serif; }
@@ -1793,6 +1862,108 @@ html input[disabled] {
   .exchange-arrows {
     display: none; }
   #exchange-form .btn-group, .btn-group-vertical {
-    position: static; } }
+    position: static; }
+  /* What is bitcoin sections */
+  .section-what {
+    padding: 25px 0 0px; }
+    .section-what h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 45px;
+      transform: rotate(0deg);
+      font-weight: 100;
+      width: auto;
+      margin-top: 0;
+      text-align: center; }
+      .section-what h4:after {
+        display: none; }
+    .section-what .section-what-inner {
+      padding: 0;
+      text-align: center; }
+      .section-what .section-what-inner img {
+        margin: 0 0 30px 0;
+        display: block;
+        margin: 0 auto 30px; }
+  .section-safe {
+    background: url("/images/wib/pattern-2.png") no-repeat left 20px, #f3f3f3; }
+    .section-safe img {
+      margin: 50px 0 25px; }
+    .section-safe h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 45px;
+      transform: rotate(0deg);
+      font-weight: 100;
+      width: auto;
+      margin-top: 0;
+      text-align: center; }
+    .section-safe p {
+      font-size: 20px; }
+  .border-bottom {
+    width: 150px;
+    height: 25px;
+    margin: 15px auto; }
+    .border-bottom.border-green {
+      background: #77b239; }
+  .section-dollar {
+    background: url("/images/wib/pattern-3.png") no-repeat right -50px, #f3f3f3;
+    padding: 50px 0 100px; }
+    .section-dollar h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 45px;
+      transform: rotate(0deg);
+      font-weight: 100;
+      width: auto;
+      margin-top: 0;
+      text-align: center; }
+    .section-dollar p {
+      font-size: 20px; }
+    .section-dollar img {
+      margin-top: 20px;
+      display: block;
+      margin: 0 auto;
+      max-width: 250px; }
+  .section-change-value {
+    background: url("/images/wib/pattern-4.png") no-repeat left top, #f3f3f3;
+    padding: 0px 0 50px; }
+    .section-change-value h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 45px;
+      transform: rotate(0deg);
+      font-weight: 100;
+      width: auto;
+      margin-top: 0;
+      text-align: center;
+      line-height: 1; }
+      .section-change-value h4 span {
+        font-size: 48px;
+        font-weight: 400; }
+      .section-change-value h4:after {
+        display: none; }
+  .section-why-use {
+    background: url("/images/wib/btn-bg.jpg") no-repeat left top, #f3f3f3;
+    background-size: cover;
+    padding: 20px 0; }
+    .section-why-use h3 {
+      font-size: 40px;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      margin-bottom: 60px; }
+      .section-why-use h3 strong {
+        font-weight: 600; }
+  .section-investment {
+    background: url("/images/wib/pattern-5.jpg") no-repeat left top, url("/images/wib/pattern-6.jpg") no-repeat right top, #f3f3f3;
+    padding: 50px 0; }
+    .section-investment h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 46px;
+      transform-origin: left top;
+      color: #000000;
+      font-weight: 100;
+      text-transform: uppercase;
+      color: #1a1c2b; }
+    .section-investment p {
+      font-size: 20px;
+      margin-bottom: 30px; } }
 
 /*# sourceMappingURL=bundle.css.map*/
