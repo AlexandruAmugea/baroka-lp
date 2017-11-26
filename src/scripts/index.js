@@ -102,10 +102,21 @@ var app = angular.module('buroka', [
        + '<button type="button" class="btn btn-step-callout" ng-click="signIng">I already have an account</button>'
        + '</div>',
       controller: ['$scope', '$rootScope', function($scope, $rootScope) {
-
+        var body = document.getElementsByTagName('body')[0];
         function scrollAndBlock(){
           window.scrollTo( 0, 0 );
-          document.getElementsByTagName('body')[0].style.overflow = 'hidden'; 
+          body.style.overflow = 'hidden'; 
+          body.addEventListener('keyup', (e) =>{
+            if(e.keyCode === 27) {
+              $scope.$apply(function(){
+                $scope.opened = !$scope.opened;
+              });
+              unblockBody();
+              body.removeEventListener('keyup', () => {
+                console.log('removed');
+              }, false);
+            }
+          });
         }
 
         function unblockBody(){

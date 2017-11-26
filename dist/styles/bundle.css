@@ -1,0 +1,431 @@
+/* Colors file */
+/* Font colors */
+/* Font family */
+/* Header */
+header {
+  padding: 55px 0 85px;
+  background: url("/images/header-bg.jpg") no-repeat left top;
+  background-size: cover;
+  border-bottom: 5px solid #77b239; }
+
+section.form-exchange {
+  padding: 50px 0; }
+
+.section-payment-green {
+  padding: 25px 0 20px;
+  background-color: #77b239; }
+
+.section-visa {
+  background-color: #1a1c2b;
+  padding: 8px 0; }
+
+.section-steps {
+  padding: 25px 0 25px;
+  background: url("/images/steps-bg.png") no-repeat left top, #f2f2f2;
+  background-size: 100%; }
+
+.section-steps h3 {
+  font-size: 46px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1; }
+
+.tile-steps {
+  font-size: 54px;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  padding: 15px 25px;
+  background: rgba(237, 237, 237, 0.75);
+  clear: both; }
+
+.tile-steps .left {
+  float: left;
+  width: 10%;
+  text-align: center; }
+
+.tile-steps .right {
+  float: left;
+  width: 90%; }
+
+.tile-steps:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.tile-steps h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  margin-top: 10px; }
+
+.tile-steps p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
+  line-height: 1.25; }
+
+.section-city {
+  background: url("/images/city-bg.jpg") no-repeat left top;
+  background-size: cover;
+  padding: 50px 0; }
+
+.section-city h4 {
+  color: #ffffff;
+  font-size: 33px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 75px;
+  position: relative; }
+
+.section-city h6 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center; }
+
+.section-city h4:after {
+  content: "";
+  position: absolute;
+  width: 175px;
+  height: 3px;
+  background: #ffffff;
+  left: calc(50% - 88px);
+  bottom: -20px; }
+
+.section-city p {
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff; }
+
+.section-city img {
+  margin: 30px auto; }
+
+.section-city .btn-form-submit {
+  margin-top: 50px; }
+
+.section-feedback {
+  background: #ededed;
+  padding: 50px 0; }
+
+.media-wrapper {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px; }
+
+.media-wrapper img {
+  float: left;
+  width: 47px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 15px; }
+
+.media-wrapper h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0;
+  padding-top: 13px; }
+
+.media-wrapper .btn-media {
+  position: absolute;
+  right: 15px;
+  top: 35px; }
+
+.media-wrapper .media-title {
+  margin-bottom: 35px; }
+
+.media-wrapper p {
+  margin-bottom: 15px;
+  font-size: 13px;
+  color: #000000; }
+
+.section-feedback h4 {
+  font-size: 34px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 50px;
+  position: relative; }
+
+.section-feedback h4:after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  background: #77b239;
+  left: calc(50% - 35px);
+  bottom: -10px; }
+
+.section-bitcoin {
+  background: url("/images/bitcoin-bg.png") no-repeat left top;
+  background-size: cover;
+  padding: 130px 0; }
+
+.section-bitcoin h2 {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 60px;
+  margin: 0 0 15px; }
+
+.section-bitcoin h3 {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 33px;
+  margin: 0 0 50px; }
+
+.section-journals {
+  padding: 50px 80px;
+  background: #ededed; }
+
+.section-journals h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 30px; }
+
+.section-journals h2:after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  background: #77b239;
+  left: calc(50% - 35px);
+  bottom: -10px; }
+
+.section-connect {
+  background: #ffffff;
+  padding: 40px 0; }
+
+.section-connect h2 {
+  text-align: right;
+  color: #000000;
+  border-right: 2px solid #77b239;
+  padding: 25px 30px;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-right: -15px; }
+
+footer {
+  background: url("/images/footer-bg.png");
+  background-size: cover;
+  padding: 40px 0 15px; }
+
+footer hr {
+  border: none;
+  border-bottom: 1px solid #474e5b;
+  margin: 30px 0; }
+
+footer p {
+  font-size: 9px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  margin: 0; }
+
+#exchange-form {
+  margin: 30px 0; }
+
+body {
+  font-family: "Poppins", sans-serif; }
+
+h1 {
+  font-size: 43px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin: 50px 0 0;
+  color: #ffffff; }
+
+p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #000000; }
+
+ul.navbar-lg {
+  float: right; }
+
+ul.navbar-lg li {
+  display: inline; }
+
+ul.navbar-lg li a {
+  color: #ffffff;
+  padding: 10px 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.25px; }
+
+ul.navbar-lg li a:hover,
+ul.navbar-lg li a:focus,
+ul.navbar-lg li a:visited {
+  color: #ffffff;
+  text-decoration: none; }
+
+.btn.btn-register {
+  background-color: #77b239;
+  padding: 10px 40px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  color: #ffffff; }
+
+.btn.btn-step-callout {
+  padding: 15px 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  border-radius: 30px;
+  background-color: #000000;
+  text-transform: uppercase;
+  color: #ffffff; }
+
+.btn.btn-form-submit {
+  padding: 15px 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  border-radius: 30px;
+  background-color: #77b239;
+  text-transform: uppercase;
+  color: #ffffff; }
+
+.btn-media-fb {
+  color: #ffffff;
+  border-radius: 0;
+  padding: 5px 15px;
+  font-size: 12px;
+  background-color: #5476bf; }
+
+.btn-media-fb img {
+  width: 15px;
+  height: auto;
+  margin-right: 10px; }
+
+.btn-media-tw {
+  color: #ffffff;
+  border-radius: 0;
+  padding: 5px 15px;
+  font-size: 12px;
+  background-color: #2897e7; }
+
+.btn-media-tw img {
+  width: 15px;
+  height: auto;
+  margin-right: 10px; }
+
+.btn-media-fb:hover,
+.btn-media-fb:focus,
+.btn-media-fb:visited,
+.btn-media-tw:hover,
+.btn-media-tw:focus,
+.btn-media-tw:visited {
+  color: #fff;
+  text-decoration: none; }
+
+.footer-links-group dt {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 10px; }
+
+.footer-links-group dd a {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: none; }
+
+.social-connect {
+  list-style: none;
+  margin: 45px 0 0 -15px; }
+
+.social-connect li {
+  display: inline-block;
+  margin: 0 0 0 50px; }
+
+.social-connect li:first-child {
+  margin-left: 0; }
+
+.social-connect li img {
+  height: 18px;
+  width: auto; }
+
+.section-visa ul {
+  margin: 0 auto;
+  max-width: 540px; }
+
+.section-visa ul li {
+  display: inline;
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 10px;
+  font-weight: 200; }
+
+.section-visa ul li:last-child {
+  margin-right: 0; }
+
+.section-visa ul li img {
+  margin-right: 5px; }
+
+.section-payment-green ul {
+  margin: 0 auto;
+  max-width: 570px; }
+
+.section-payment-green ul li {
+  color: #ffffff;
+  display: inline;
+  list-style: none;
+  margin: 0 auto;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-left: 15px; }
+
+.section-payment-green ul li img {
+  padding-right: 10px;
+  margin-top: -5px; }
+
+.section-payment-green ul li span {
+  padding-left: 15px;
+  border-left: 2px solid #ffffff; }
+
+.input-wrapper {
+  padding: 15px;
+  border: 1px solid #77b239;
+  border-left-color: #23a58b;
+  border-top-color: #23a58b;
+  border-radius: 20px; }
+
+.input-wrapper input {
+  border: none;
+  box-shadow: none;
+  border-right: 2px solid #d8d8d8;
+  padding-left: 30px;
+  width: 70%; }
+
+.input-wrapper select {
+  border: none;
+  box-shadow: none;
+  color: #000000;
+  font-weight: 600;
+  padding-left: 10px;
+  width: 25%; }
+
+.input-wrapper input:focus,
+.input-wrapper input:visited,
+.input-wrapper input:hover,
+.input-wrapper input:active,
+.input-wrapper select:focus,
+.input-wrapper select:visited,
+.input-wrapper select:hover,
+.input-wrapper select:active {
+  border: none;
+  box-shadow: none; }
+
+textarea:focus, input:focus, select:focus, button:focus, a:focus {
+  outline: none; }
+
+/*# sourceMappingURL=bundle.css.map*/

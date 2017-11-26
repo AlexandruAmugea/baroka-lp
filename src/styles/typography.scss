@@ -25,3 +25,38 @@ p {
     color: $green;
 }
 
+h1.heading-rotate-90 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 86px;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    color: $black;
+    font-weight: 100;
+    width: 410px;
+    margin-top: 410px;
+}
+
+h1.heading-rotate-90.heading-page-atf {
+    width: 570px;
+    margin-top: 570px;
+}
+
+h2 {
+    font-size: 36px;
+    color: $black;
+    margin: 30px 0px 20px;
+    font-weight: 300;
+}
+
+p {
+    font-size: 16px;
+}
+
+ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.section-faq {
+    padding: 50px 0;
+}
