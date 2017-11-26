@@ -41,4 +41,8 @@ app.get('/aml-kyc-policy', function(req, res){
     res.sendFile(__dirname + "/dist/aml-kyc-policy.html");
 })
 
+app.get('/what-is-bitcoin', function(req, res){
+    res.sendFile(__dirname + "/dist/what-is-bitcoin.html");
+})
+
 app.listen(port);
