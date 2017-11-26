@@ -115,3 +115,78 @@ ul.navbar-lg li:last-child a:focus {
 #external-wrapper {
     display: none;
 }
+
+/* Faq tab menu */
+
+.tab-menu-faq {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+
+    & li {
+        display: inline-block;
+        width: 32%;
+
+        & a {
+            color: #555661;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 2px solid #bcbcc0;
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+            border-top: 2px solid transparent;
+
+            &:hover, &:focus, &:visited {
+                color: #555661;
+                text-decoration: none;
+            }
+        }
+
+        & a.active {
+            border-top: 2px solid #bcbcc0;
+        }
+    }
+}
+
+.section-faq-tab-section {
+    position: relative;
+
+    &.active {
+        & .section-faq-tab-section-selected {
+            display: block;
+        }
+    }
+
+    & .section-faq-tab-section-selected {
+        transform: rotate(-90deg);
+        position: absolute;
+        left: -300px;
+        top: 225px;
+        min-width: 500px;
+        height: 50px;
+        border-bottom: 10px solid #77b239;
+        text-align: right;
+        display: none;
+
+        & a:hover, & a:focus, & a:visited {
+            text-decoration: none;
+        }
+
+        & img {
+            transform: rotate(90deg);
+            transform-origin: center;
+            position: absolute;
+            right: 20px;
+            top: -30px;
+        }
+
+        & h5 {
+            color: #77b239;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}

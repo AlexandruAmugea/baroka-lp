@@ -1256,7 +1256,8 @@ h1.heading-rotate-90 {
   color: #000000;
   font-weight: 100;
   width: 410px;
-  margin-top: 410px; }
+  margin-top: 410px;
+  color: #1a1c2b; }
 
 h1.heading-rotate-90.heading-page-atf {
   width: 570px;
@@ -1273,6 +1274,11 @@ h1.heading-rotate-90.heading-page-tou {
 h1.heading-rotate-90.heading-page-rrp {
   width: 740px;
   margin-top: 740px; }
+
+h1.heading-rotate-90.heading-rotate-page-faq {
+  width: 400px;
+  margin-top: 400px;
+  font-size: 160px; }
 
 h2 {
   font-size: 36px;
@@ -1388,6 +1394,58 @@ ul.navbar-lg li:last-child a:focus {
 
 #external-wrapper {
   display: none; }
+
+/* Faq tab menu */
+.tab-menu-faq {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px; }
+  .tab-menu-faq li {
+    display: inline-block;
+    width: 32%; }
+    .tab-menu-faq li a {
+      color: #555661;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 10px 0;
+      text-align: center;
+      border-bottom: 2px solid #bcbcc0;
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+      border-top: 2px solid transparent; }
+      .tab-menu-faq li a:hover, .tab-menu-faq li a:focus, .tab-menu-faq li a:visited {
+        color: #555661;
+        text-decoration: none; }
+    .tab-menu-faq li a.active {
+      border-top: 2px solid #bcbcc0; }
+
+.section-faq-tab-section {
+  position: relative; }
+  .section-faq-tab-section.active .section-faq-tab-section-selected {
+    display: block; }
+  .section-faq-tab-section .section-faq-tab-section-selected {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -300px;
+    top: 225px;
+    min-width: 500px;
+    height: 50px;
+    border-bottom: 10px solid #77b239;
+    text-align: right;
+    display: none; }
+    .section-faq-tab-section .section-faq-tab-section-selected a:hover, .section-faq-tab-section .section-faq-tab-section-selected a:focus, .section-faq-tab-section .section-faq-tab-section-selected a:visited {
+      text-decoration: none; }
+    .section-faq-tab-section .section-faq-tab-section-selected img {
+      transform: rotate(90deg);
+      transform-origin: center;
+      position: absolute;
+      right: 20px;
+      top: -30px; }
+    .section-faq-tab-section .section-faq-tab-section-selected h5 {
+      color: #77b239;
+      font-size: 20px;
+      font-weight: 600; }
 
 .btn.btn-register {
   background-color: #77b239;
@@ -1964,6 +2022,19 @@ html input[disabled] {
       color: #1a1c2b; }
     .section-investment p {
       font-size: 20px;
-      margin-bottom: 30px; } }
+      margin-bottom: 30px; }
+  h1.heading-rotate-90 {
+    font-size: 40px !important;
+    margin-top: 20px !important;
+    width: auto !important;
+    transform: rotate(0deg) !important; }
+  .tab-menu-faq li a {
+    font-size: 10px; }
+  .tab-menu-faq li a.active {
+    border-top: 2px solid #bcbcc0; }
+  h1.heading-rotate-90.heading-rotate-page-faq {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px; } }
 
 /*# sourceMappingURL=bundle.css.map*/

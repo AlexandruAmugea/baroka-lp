@@ -11,9 +11,11 @@ import steps from './steps.js';
 import angular from 'angular';
 import dropdown from 'angular-ui-bootstrap/src/dropdown/index-nocss.js';
 import modal from 'angular-ui-bootstrap/src/modal/index-nocss.js';
+import faqTabMenu from './faqTabMenu.js';
 
 menu.initMobileMenu();
 steps.initSteps();
+faqTabMenu.initTabMenuFaq();
 
 var app = angular.module('buroka', [
   dropdown,
