@@ -16,7 +16,7 @@
 
     <div id="external-wrapper"></div>
     <div id="pop-up-wrapper"></div>
-    <header>
+    <header ng-controller="headerController">
         <nav class="mobile-menu">
             <a id="sidenav-button--slide-left" class="ln-menu sidenav-button--slide-left" href="javascript:void(0)">
                 <svg height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,7 @@
                 </div>
                 <br>
                 <ul class="navbar-lg">
-                    <li><a href="/">How it works</a></li>
+                    <li><a href="" ng-click="howItWorks(event)">How it works</a></li>
                     <li><a href="/faq">Faq</a></li>
                     <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
                     <li><a href="">Login</a></li>
@@ -50,13 +50,11 @@
             <nav>
                 <div class="row">
                     <div class="col-xs-12 col-sm-3">
-                        <a href="/">
-                            <img src="images/logo.png" alt="" class="pull-left logo">
-                        </a>
+                        <a href="/"><img src="images/logo.png" alt="" class="pull-left logo"></a>
                     </div>
                     <div class="col-xs-12 col-sm-9">
                         <ul class="navbar-lg">
-                            <li><a href="/">How it works</a></li>
+                            <li><a href="" ng-click="howItWorks(event)">How it works</a></li>
                             <li><a href="/faq">Faq</a></li>
                             <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
                             <li><a href="">Login</a></li>
@@ -67,12 +65,8 @@
             </nav>
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-                    <h1 class="text-center">Buroka makes it
-                        <strong>safe</strong> &
-                        <strong>easy</strong> to
-                        <strong>buy</strong> and
-                        <strong>sell bitcoin</strong> in
-                        <strong>nigeria</strong>
+                    <h1 class="text-center">Buroka makes it <strong>safe</strong> & <strong>easy</strong> to
+                        <strong>buy</strong> and <strong>sell bitcoin</strong> in <strong>nigeria</strong>
                     </h1>
                 </div>
             </div>
@@ -97,7 +91,8 @@
                     <p>The purpose of this Privacy Policy is to inform you of:</p>
                     <br>
                     <p>
-                        <strong>1.</strong> the kinds of Personal Information which we may collect about you and how it may be used;</p>
+                        <strong>1.</strong> the kinds of Personal Information which we may collect about you and how it may
+                        be used;</p>
                     <p>
                         <strong>2.</strong> our use of information regarding IP Addresses and our use of cookies;</p>
                     <p>
@@ -105,12 +100,13 @@
                     <p>
                         <strong>4.</strong> your ability to correct, update and delete your Personal Information; and</p>
                     <p>
-                        <strong>5.</strong> the security measures we have in place to prevent the loss, misuse, or alteration of
-                        Personal Information under our control.</p>
+                        <strong>5.</strong> the security measures we have in place to prevent the loss, misuse, or alteration
+                        of Personal Information under our control.</p>
                     <h2>Gathering and Use of Personal Information</h2>
                     <p>We may collect your Personal Information if you use the Site, open an Account to use the Platform or
                         perform any Transactions on the Platform. The types of Personal Information which we collect may
-                        include:</p>
+                        include:
+                    </p>
                     <p>
                         <strong>1.</strong> your name;</p>
                     <p>
@@ -140,18 +136,19 @@
                     <p>
                         <strong>5.</strong> as required for regulatory purposes;</p>
                     <p>
-                        <strong>6.</strong> to provide you with information about products and promotions that may be of interest
-                        to you, from ourselves and third parties, although only if you have specifically agreed to receive
-                        such information;</p>
+                        <strong>6.</strong> to provide you with information about products and promotions that may be of
+                        interest to you, from ourselves and third parties, although only if you have specifically agreed
+                        to receive such information;</p>
                     <p>
-                        <strong>7.</strong> for market research e.g. surveying our Users' needs and opinions on issues, such as our
-                        performance etc.</p>
+                        <strong>7.</strong> for market research e.g. surveying our Users' needs and opinions on issues, such
+                        as our performance etc.</p>
                     <p>We will process your Personal Information only for the purpose(s) for which it has been provided to us.</p>
                     <h2>IP Addresses</h2>
                     <p>We may collect information about your computer, including where available your IP address, operating
                         system and browser type, for system administration and to report aggregate information to our advertisers.
                         This is statistical data about our users' browsing actions and patterns and does not identify any
-                        individual.</p>
+                        individual.
+                    </p>
                     <h2>Cookies</h2>
                     <p>We use a browser feature known as a "cookie", which assigns a unique identification to your computer.
                         Cookies are typically stored on your computer's hard drive. Information collected from cookies is
@@ -178,7 +175,8 @@
                     <p></p>
                     <p>We use the Personal Information for the purposes indicated at the time you provide us with such information,
                         and/or otherwise for the purposes set out in this Privacy Policy and/or as otherwise permitted by
-                        law.</p>
+                        law.
+                    </p>
                     <p>We may make available the Personal Information that you provide to us to our affiliates, agents, representatives,
                         trusted service providers and contractors for these limited purposes.</p>
                     <p>We may also share Users’ Personal Information with financial institutions, insurance companies or other
@@ -204,7 +202,8 @@
                     <p>Upon your written request, we will inform you of the Personal Information relating to you that we hold
                         and the use and general disclosure of your Personal Information. We will also give you a copy of
                         the Personal Information we have retained. There may be a minimal charge for accessing your Personal
-                        Information.</p>
+                        Information.
+                    </p>
                     <h2>Security</h2>
                     <p>We have implemented security measures to ensure the confidentiality of your Personal Information and
                         to protect your Personal Information from loss, misuse, alteration or destruction. Only authorised
@@ -239,7 +238,8 @@
                     <h2>Contact Us</h2>
                     <p>If you have any questions, comments, or concerns regarding our Privacy Policy and/or practices as it
                         or they relate to the Platform, please contact us at the following e-mail address, address and telephone
-                        number:</p>
+                        number:
+                    </p>
                     <p>E-Mail:
                         <a href="mailto:support@buroka.com">support@buroka.com</a>
                     </p>
@@ -247,57 +247,58 @@
             </div>
         </div>
     </section>
-    <footer>
-            <div class="container">
-              <div class="row">
+    <footer ng-controller="footerController">
+        <div class="container">
+            <div class="row">
                 <div class="col-xs-12 col-sm-2 col-sm-offset-2">
-                  <dl class="footer-links-group">
-                    <dt>Company</dt>
-                    <dd><a href="">About Us</a></dd>
-                    <dd><a href="">Blog & News</a></dd>
-                  </dl>
-                </div>
-                <div class="col-xs-12 col-sm-2">
-                  <dl class="footer-links-group">
-                    <dt>Help & Support</dt>
-                    <dd><a href="/what-is-bitcoin">What is Bitcoin</a></dd>
-                    <dd><a href="/faq">FAQ</a></dd>
-                    <dd><a href="">How it Works</a></dd>
-                    <dd><a href="">Help Center</a></dd>
-                  </dl>
-                </div>
-                <div class="col-xs-12 col-sm-2">
-                  <dl class="footer-links-group">
-                      <dt>other</dt>
-                      <dd><a href="/aml-kyc-policy">AML/KYC Policy</a></dd>
-                      <dd>
-                          <a href="/anti-fraud-policy">Anti-fraud Policy</a>
-                      </dd>
-                      <dd>
-                          <a href="/privacy-policy">Privacy Policy</a>
-                      </dd>
-                      <dd>
-                          <a href="/refund">Refund Policy</a>
-                      </dd>
-                      <dd>
-                          <a href="/risk-warning">Risk Warning</a>
-                      </dd>
-                      <dd>
-                          <a href="/terms">Terms of Use</a>
-                      </dd>
-                  </dl>
-              </div>
-                <div class="col-xs-12 col-sm-2">
                     <dl class="footer-links-group">
-                      <dt>Contact us</dt>
+                        <dt>Company</dt>
+                        <dd><a href="">About Us</a></dd>
+                        <dd><a href="">Blog & News</a></dd>
                     </dl>
                 </div>
-              </div>
+                <div class="col-xs-12 col-sm-2">
+                    <dl class="footer-links-group">
+                        <dt>Help & Support</dt>
+                        <dd><a href="/what-is-bitcoin">What is Bitcoin</a></dd>
+                        <dd><a href="/faq">FAQ</a></dd>
+                        <dd><a href="" ng-click="howItWorks(event)">How it works</a></dd>
+                        <dd><a href="">Help Center</a></dd>
+                    </dl>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <dl class="footer-links-group">
+                        <dt>other</dt>
+                        <dd><a href="/aml-kyc-policy">AML/KYC Policy</a></dd>
+                        <dd>
+                            <a href="/anti-fraud-policy">Anti-fraud Policy</a>
+                        </dd>
+                        <dd>
+                            <a href="/privacy-policy">Privacy Policy</a>
+                        </dd>
+                        <dd>
+                            <a href="/refund">Refund Policy</a>
+                        </dd>
+                        <dd>
+                            <a href="/risk-warning">Risk Warning</a>
+                        </dd>
+                        <dd>
+                            <a href="/terms">Terms of Use</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <dl class="footer-links-group">
+                        <dt>Contact us</dt>
+                    </dl>
+                </div>
             </div>
-            <hr>
-            <p>© 2017 buroka. All rights reserved | GRAPHORIC</p>
-          </footer>
+        </div>
+        <hr>
+        <p>© 2017 buroka. All rights reserved | GRAPHORIC</p>
+    </footer>
     <register-popup opened="false"></register-popup>
+    <how-it-works-pop-up howopened="false"></how-it-works-pop-up>
 
     <script type="text/javascript" src="bundle.js"></script>
 </body>

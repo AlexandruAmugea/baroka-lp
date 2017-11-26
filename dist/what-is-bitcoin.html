@@ -16,7 +16,7 @@
 
     <div id="external-wrapper"></div>
     <div id="pop-up-wrapper"></div>
-    <header>
+    <header ng-controller="headerController">
         <nav class="mobile-menu">
             <a id="sidenav-button--slide-left" class="ln-menu sidenav-button--slide-left" href="javascript:void(0)">
                 <svg height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,7 @@
                 </div>
                 <br>
                 <ul class="navbar-lg">
-                    <li><a href="/">How it works</a></li>
+                    <li><a href="" ng-click="howItWorks(event)">How it works</a></li>
                     <li><a href="/faq">Faq</a></li>
                     <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
                     <li><a href="">Login</a></li>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-9">
                         <ul class="navbar-lg">
-                            <li><a href="">How it works</a></li>
+                            <li><a href="" ng-click="howItWorks(event)">How it works</a></li>
                             <li><a href="/faq">Faq</a></li>
                             <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
                             <li><a href="">Login</a></li>
@@ -202,7 +202,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer ng-controller="footerController">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-2 col-sm-offset-2">
@@ -217,7 +217,7 @@
                         <dt>Help & Support</dt>
                         <dd><a href="/what-is-bitcoin">What is Bitcoin</a></dd>
                         <dd><a href="/faq">FAQ</a></dd>
-                        <dd><a href="">How it Works</a></dd>
+                        <dd><a href="" ng-click="howItWorks(event)">How it works</a></dd>
                         <dd><a href="">Help Center</a></dd>
                     </dl>
                 </div>
@@ -253,6 +253,7 @@
         <p>© 2017 buroka. All rights reserved | GRAPHORIC</p>
     </footer>
     <register-popup opened="false"></register-popup>
+    <how-it-works-pop-up howopened="false"></how-it-works-pop-up>
 
     <script type="text/javascript" src="bundle.js"></script>
 </body>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="buroka">
+
 <head>
   <meta charset="UTF-8">
   <title>Buroka - Crypto Exchange</title>
@@ -9,42 +10,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bundle.css">
 </head>
+
 <body>
 
 
-<div id="external-wrapper"></div>  
-<div id="pop-up-wrapper"></div>
-<header>
-  <nav class="mobile-menu">
-    <a id="sidenav-button--slide-left" class="ln-menu sidenav-button--slide-left" href="javascript:void(0)">
-      <svg height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-      </svg>
-    </a>
-    <div class="mobile-menu-wrapper">
+  <div id="external-wrapper"></div>
+  <div id="pop-up-wrapper"></div>
+  <header ng-controller="headerController">
+    <nav class="mobile-menu">
+      <a id="sidenav-button--slide-left" class="ln-menu sidenav-button--slide-left" href="javascript:void(0)">
+        <svg height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+      </a>
+      <div class="mobile-menu-wrapper">
         <div class="text-center">
           <a href="javascript:void(0)" class="sidenav-menu__close ln-close">
-              <svg width="24px" height="24px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g stroke="none" stroke-width="1" fill="#000" fill-rule="evenodd">
-                  <g transform="translate(-35.000000, -42.000000)">
-                    <polygon points="53 49.875 39.3087499 49.875 45.5975 43.5862498 44 42 35 51 44 60 45.5862498 58.4137501 39.3087499 52.125 53 52.125"></polygon>
-                  </g>
+            <svg width="24px" height="24px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="#000" fill-rule="evenodd">
+                <g transform="translate(-35.000000, -42.000000)">
+                  <polygon points="53 49.875 39.3087499 49.875 45.5975 43.5862498 44 42 35 51 44 60 45.5862498 58.4137501 39.3087499 52.125 53 52.125"></polygon>
                 </g>
-              </svg>
-            </a>
+              </g>
+            </svg>
+          </a>
         </div>
-        <br> 
+        <br>
         <ul class="navbar-lg">
-            <li><a href="/">How it works</a></li>
-            <li><a href="/faq">Faq</a></li>
-            <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
-            <li><a href="">Login</a></li>
-            <li><a href="" class="btn btn-register">Register</a></li>
+          <li><a href="" ng-click="howItWorks(event)">How it works</a></li>
+          <li><a href="/faq">Faq</a></li>
+          <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
+          <li><a href="">Login</a></li>
+          <li><a href="" class="btn btn-register">Register</a></li>
         </ul>
-    </div>  
-  </nav>
-  <div class="container">
+      </div>
+    </nav>
+    <div class="container">
       <nav>
         <div class="row">
           <div class="col-xs-12 col-sm-3">
@@ -52,11 +54,11 @@
           </div>
           <div class="col-xs-12 col-sm-9">
             <ul class="navbar-lg">
-                <li><a href="/">How it works</a></li>
-                <li><a href="/faq">Faq</a></li>
-                <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
-                <li><a href="">Login</a></li>
-                <li><a href="" class="btn btn-register">Register</a></li>
+              <li><a href="" ng-click="howItWorks(event)">How it works</a></li>
+              <li><a href="/faq">Faq</a></li>
+              <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
+              <li><a href="">Login</a></li>
+              <li><a href="" class="btn btn-register">Register</a></li>
             </ul>
           </div>
         </div>
@@ -64,34 +66,49 @@
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
           <h1 class="text-center">Buroka makes it <strong>safe</strong> & <strong>easy</strong> to
-              <strong>buy</strong> and <strong>sell bitcoin</strong> in <strong>nigeria</strong>
-              </h1>
+            <strong>buy</strong> and <strong>sell bitcoin</strong> in <strong>nigeria</strong>
+          </h1>
         </div>
       </div>
     </div>
-</header>
+  </header>
 
-<section class="section-faq">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-3 col-xs-12">
-        <h1 class="heading-rotate-90 heading-page-rw">
+  <section class="section-faq">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-xs-12">
+          <h1 class="heading-rotate-90 heading-page-rw">
             Risk Warning
-        </h1>
-      </div>
-      <div class="col-sm-9 col-xs-12">
-          <p>The trading of commodities and currencies involves a significant amount of risk. Prices can fluctuate on any given day. Because of such price fluctuations, you may gain or lose value of your assets at any given moment. Any currency may be subject to large swings in value and may even become absolutely worthless. There is always an inherent risk that losses will occur as a result of buying, selling or trading anything on the market.</p>
-          <p>Bitcoin trading has specific risks, which are not shared with other official currencies, goods or commodities in a market.</p>
-          <p>Unlike most currencies, which are supported by government reserves or other legal entities, as well as commodities such as silver and gold, Bitcoin is a "flat" currency, which is only backed by mathematics, technology and trust. The currency is absolutely decentralized, which means there is no authority that can take corrective measure to protect the Bitcoin value in a crisis or issue more currency.</p>
-          <p>Bitcoin is an autonomous and mostly unregulated worldwide payment system. When using Bitcoins - traders put their trust in the digital, decentralized and mostly anonymous system, which relies on p2p networking and cryptography to maintain its integrity.</p>
-          <p>Bitcoin trading is susceptible to irrational or rational bubbles or absolute loss of confidence, which could collapse demand/supply. Any actions, even remotely connected to Bitcoins can crash confidence in this currency, such as unexpected changes imposed by the currency developers, a government crackdown, the creation of a superior competing Bitcoin alternative, or even a deflation or inflation spiral. Confidence might also collapse because of various technical problems: if the anonymity of the system can be compromised, funds lost or stolen, or in the event that hackers or governments become able to prevent Bitcoin transactions from settling.</p>
+          </h1>
+        </div>
+        <div class="col-sm-9 col-xs-12">
+          <p>The trading of commodities and currencies involves a significant amount of risk. Prices can fluctuate on any given
+            day. Because of such price fluctuations, you may gain or lose value of your assets at any given moment. Any currency
+            may be subject to large swings in value and may even become absolutely worthless. There is always an inherent
+            risk that losses will occur as a result of buying, selling or trading anything on the market.</p>
+          <p>Bitcoin trading has specific risks, which are not shared with other official currencies, goods or commodities in
+            a market.</p>
+          <p>Unlike most currencies, which are supported by government reserves or other legal entities, as well as commodities
+            such as silver and gold, Bitcoin is a "flat" currency, which is only backed by mathematics, technology and trust.
+            The currency is absolutely decentralized, which means there is no authority that can take corrective measure
+            to protect the Bitcoin value in a crisis or issue more currency.</p>
+          <p>Bitcoin is an autonomous and mostly unregulated worldwide payment system. When using Bitcoins - traders put their
+            trust in the digital, decentralized and mostly anonymous system, which relies on p2p networking and cryptography
+            to maintain its integrity.</p>
+          <p>Bitcoin trading is susceptible to irrational or rational bubbles or absolute loss of confidence, which could collapse
+            demand/supply. Any actions, even remotely connected to Bitcoins can crash confidence in this currency, such as
+            unexpected changes imposed by the currency developers, a government crackdown, the creation of a superior competing
+            Bitcoin alternative, or even a deflation or inflation spiral. Confidence might also collapse because of various
+            technical problems: if the anonymity of the system can be compromised, funds lost or stolen, or in the event
+            that hackers or governments become able to prevent Bitcoin transactions from settling.</p>
           <p>There may be additional risks, which have not been foreseen or identified in the current Terms of Use.</p>
-          <p>Every user has to carefully assess whether his/her financial situation and tolerance for risk is suitable for buying/selling/trading Bitcoins.</p>
+          <p>Every user has to carefully assess whether his/her financial situation and tolerance for risk is suitable for buying/selling/trading
+            Bitcoins.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<footer>
+  </section>
+  <footer ng-controller="footerController">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-2 col-sm-offset-2">
@@ -106,44 +123,46 @@
             <dt>Help & Support</dt>
             <dd><a href="/what-is-bitcoin">What is Bitcoin</a></dd>
             <dd><a href="/faq">FAQ</a></dd>
-            <dd><a href="">How it Works</a></dd>
+            <dd><a href="" ng-click="howItWorks(event)">How it works</a></dd>
             <dd><a href="">Help Center</a></dd>
           </dl>
         </div>
         <div class="col-xs-12 col-sm-2">
           <dl class="footer-links-group">
-              <dt>other</dt>
-              <dd><a href="/aml-kyc-policy">AML/KYC Policy</a></dd>
-              <dd>
-                  <a href="/anti-fraud-policy">Anti-fraud Policy</a>
-              </dd>
-              <dd>
-                  <a href="/privacy-policy">Privacy Policy</a>
-              </dd>
-              <dd>
-                  <a href="/refund">Refund Policy</a>
-              </dd>
-              <dd>
-                  <a href="/risk-warning">Risk Warning</a>
-              </dd>
-              <dd>
-                  <a href="/terms">Terms of Use</a>
-              </dd>
+            <dt>other</dt>
+            <dd><a href="/aml-kyc-policy">AML/KYC Policy</a></dd>
+            <dd>
+              <a href="/anti-fraud-policy">Anti-fraud Policy</a>
+            </dd>
+            <dd>
+              <a href="/privacy-policy">Privacy Policy</a>
+            </dd>
+            <dd>
+              <a href="/refund">Refund Policy</a>
+            </dd>
+            <dd>
+              <a href="/risk-warning">Risk Warning</a>
+            </dd>
+            <dd>
+              <a href="/terms">Terms of Use</a>
+            </dd>
           </dl>
-      </div>
+        </div>
         <div class="col-xs-12 col-sm-2">
-            <dl class="footer-links-group">
-              <dt>Contact us</dt>
-            </dl>
+          <dl class="footer-links-group">
+            <dt>Contact us</dt>
+          </dl>
         </div>
       </div>
     </div>
     <hr>
     <p>© 2017 buroka. All rights reserved | GRAPHORIC</p>
   </footer>
-<register-popup opened="false"></register-popup>
+  <register-popup opened="false"></register-popup>
+  <how-it-works-pop-up howopened="false"></how-it-works-pop-up>
 
-<script type="text/javascript" src="bundle.js"></script>
+  <script type="text/javascript" src="bundle.js"></script>
 </body>
 </body>
+
 </html>

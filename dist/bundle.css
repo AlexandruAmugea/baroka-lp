@@ -1800,6 +1800,29 @@ html input[disabled] {
   border: 1px solid #77b239;
   color: #77b239; }
 
+.pop-up-how {
+  display: none;
+  position: absolute;
+  left: calc(50% - 540px);
+  top: 100px;
+  width: 1080px;
+  height: auto;
+  z-index: 10000; }
+  .pop-up-how.active {
+    display: block; }
+
+.pop-up-how-wrapper {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); }
+  .pop-up-how-wrapper.active {
+    display: block; }
+
 /* ----------- iPad mini ----------- */
 /* Portrait and Landscape */
 /* Portrait */
@@ -2035,6 +2058,9 @@ html input[disabled] {
   h1.heading-rotate-90.heading-rotate-page-faq {
     font-size: 40px;
     text-align: center;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .pop-up-how {
+    max-width: 250px;
+    left: calc(50% - 125px); } }
 
 /*# sourceMappingURL=bundle.css.map*/

@@ -22,6 +22,33 @@ var app = angular.module('buroka', [
   modal
 ]);
 
+//Header controller 
+
+(function(){
+  app.controller('headerController', ['$scope', '$rootScope', function($scope, $rootScope){
+
+    $scope.howItWorks = function(){
+      $rootScope.$emit('open:howItWorks');
+    };
+
+  }]);
+}());
+
+//Footer controller 
+
+(function(){
+  app.controller('footerController', ['$scope', '$rootScope', function($scope, $rootScope){
+
+    $scope.howItWorks = function(){
+      $rootScope.$emit('open:howItWorks');
+    };
+
+  }]);
+}());
+
+
+
+
 // Exchange form controller
 (function(){
   app.controller('exchangeFormCtrl', ['$scope', '$rootScope', 'exchangeFactory', function($scope, $rootScope, exchangeFactory){
@@ -140,6 +167,46 @@ var app = angular.module('buroka', [
 
         $scope.close = function(){
           $scope.opened = !$scope.opened;
+          unblockBody();
+        };
+      }]
+    };
+  });
+}());
+
+
+(function(){
+  app.directive('howItWorksPopUp', function(){
+    return {
+      scope: {
+        howopened: "@"
+      },
+      restric: "AE",
+      template: '<div class="pop-up-how-wrapper" ng-class="{ active : howopened === true}" ng-click="close()"></div>'
+       + '<div class="pop-up-how" ng-class="{ active : howopened === true}" ng-click="close()">'
+       + '<div class="pop-up-how--body text-center" ng-class="{ active : howopened === true}">'
+       + '<span class="register-poup--close-btn" ng-click="close()">x</span>'
+       + '<img src="images/how-it-works.jpg" class="img-responsive" />'
+       + '</div></div>',
+      controller: ['$scope', '$rootScope', function($scope, $rootScope) {
+        var body = document.getElementsByTagName('body')[0];
+
+        function scrollAndBlock(){
+          window.scrollTo( 0, 0 );
+          body.style.overflow = 'hidden'; 
+        }
+
+        function unblockBody(){
+          document.getElementsByTagName('body')[0].style.overflow = 'auto'; 
+        }
+
+        $rootScope.$on('open:howItWorks', function(){
+          $scope.howopened = true;
+          scrollAndBlock();
+        });
+
+        $scope.close = function(){
+          $scope.howopened = !$scope.howopened;
           unblockBody();
         };
       }]

@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="buroka">
+
 <head>
   <meta charset="UTF-8">
-  <title>Buroka - Buy and sell bitcoin in seconds by bank transfer, card or direct deposit</title>
+  <title>Baroka</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
 
-<div id="external-wrapper"></div>  
-<div id="pop-up-wrapper"></div>
-<header>
-  <nav class="mobile-menu">
-    <a id="sidenav-button--slide-left" class="ln-menu sidenav-button--slide-left" href="javascript:void(0)">
-      <svg height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-      </svg>
-    </a>
-    <div class="mobile-menu-wrapper">
+  <div id="external-wrapper"></div>
+  <div id="pop-up-wrapper"></div>
+  <header ng-controller="headerController">
+    <nav class="mobile-menu">
+      <a id="sidenav-button--slide-left" class="ln-menu sidenav-button--slide-left" href="javascript:void(0)">
+        <svg height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+      </a>
+      <div class="mobile-menu-wrapper">
         <div class="text-center">
           <a href="javascript:void(0)" class="sidenav-menu__close ln-close">
-              <svg width="24px" height="24px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g stroke="none" stroke-width="1" fill="#000" fill-rule="evenodd">
-                  <g transform="translate(-35.000000, -42.000000)">
-                    <polygon points="53 49.875 39.3087499 49.875 45.5975 43.5862498 44 42 35 51 44 60 45.5862498 58.4137501 39.3087499 52.125 53 52.125"></polygon>
-                  </g>
+            <svg width="24px" height="24px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="#000" fill-rule="evenodd">
+                <g transform="translate(-35.000000, -42.000000)">
+                  <polygon points="53 49.875 39.3087499 49.875 45.5975 43.5862498 44 42 35 51 44 60 45.5862498 58.4137501 39.3087499 52.125 53 52.125"></polygon>
                 </g>
-              </svg>
-            </a>
+              </g>
+            </svg>
+          </a>
         </div>
-        <br> 
+        <br>
         <ul class="navbar-lg">
-          <li><a href="">How it works</a></li>
-          <li><a href="">Faq</a></li>
+          <li><a href="" ng-click="howItWorks(event)">How it works</a></li>
+          <li><a href="/faq">Faq</a></li>
           <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
-          <li><a href="">Login</a></li> 
+          <li><a href="">Login</a></li>
           <li><a href="" class="btn btn-register">Register</a></li>
         </ul>
-    </div>  
-  </nav>
-  <div class="container">
+      </div>
+    </nav>
+    <div class="container">
       <nav>
         <div class="row">
           <div class="col-xs-12 col-sm-3">
@@ -51,10 +53,10 @@
           </div>
           <div class="col-xs-12 col-sm-9">
             <ul class="navbar-lg">
-              <li><a href="">How it works</a></li>
-              <li><a href="">Faq</a></li>
+              <li><a href="" ng-click="howItWorks(event)">How it works</a></li>
+              <li><a href="/faq">Faq</a></li>
               <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
-              <li><a href="">Login</a></li> 
+              <li><a href="">Login</a></li>
               <li><a href="" class="btn btn-register">Register</a></li>
             </ul>
           </div>
@@ -63,332 +65,325 @@
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
           <h1 class="text-center">Buroka makes it <strong>safe</strong> & <strong>easy</strong> to
-              <strong>buy</strong> and <strong>sell bitcoin</strong> in <strong>nigeria</strong>
-              </h1>
+            <strong>buy</strong> and <strong>sell bitcoin</strong> in <strong>nigeria</strong>
+          </h1>
         </div>
       </div>
     </div>
-</header>
+  </header>
 
-<section class="form-exchange" ng-controller="exchangeFormCtrl" ng-cloak>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12">
-        <p class="text-center">Buy and sell bitcoin in seconds by bank transfer, card or direct deposit</p>
-        <form action="" method="post" id="exchange-form">
+  <section class="form-exchange" ng-controller="exchangeFormCtrl" ng-cloak>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <p class="text-center">Buy and sell bitcoin in seconds by bank transfer, card or direct deposit</p>
+          <form action="" method="post" id="exchange-form">
             <div class="row">
               <div class="col-xs-12 col-sm-5">
                 <div class="input-wrapper input-wrapper-sell">
                   <input type="text" placeholder="" maxlength="7" ng-model="input.sell">
                   <div class="btn-group" uib-dropdown is-open="false">
-                      <button id="single-button" type="button" class="btn btn-select" uib-dropdown-toggle ng-disabled="disabled">
+                    <button id="single-button" type="button" class="btn btn-select" uib-dropdown-toggle ng-disabled="disabled">
                         {{currency.sell.selected.shortName}} <span class="caret"></span>
                       </button>
-                      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                        <li role="menuitem" ng-repeat="c in currency.all"><a href="" ng-click="changeSellCurrency(c)">
+                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                      <li role="menuitem" ng-repeat="c in currency.all"><a href="" ng-click="changeSellCurrency(c)">
                           <span class="currency-symbol">{{c.shortName}} </span>
                           <span class="currency-img"><i class="cc {{c.imageClass}}" title="{{c.shortName}}"></i></span>
                           <span class="currency-name">{{c.name}}</span>
                           </a></li>
-                      </ul>
-                    </div>
-                    <p class="exchange-arrows">&#8644;</p>
+                    </ul>
+                  </div>
+                  <p class="exchange-arrows">&#8644;</p>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-5">
                 <div class="input-wrapper input-wrapper-get">
                   <input type="text" placeholder="" ng-disabled="true" ng-model="input.get">
                   <div class="btn-group" uib-dropdown is-open="false">
-                      <button id="single-button" type="button" class="btn btn-select" uib-dropdown-toggle ng-disabled="disabled">
+                    <button id="single-button" type="button" class="btn btn-select" uib-dropdown-toggle ng-disabled="disabled">
                         {{currency.get.selected.shortName}} <span class="caret"></span>
                       </button>
-                      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                          <li role="menuitem" ng-repeat="c in currency.all"><a href="" ng-click="changeGetCurrency(c)">
+                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                      <li role="menuitem" ng-repeat="c in currency.all"><a href="" ng-click="changeGetCurrency(c)">
                             <span class="currency-symbol">{{c.shortName}} </span>
                             <span class="currency-img"><i class="cc {{c.imageClass}}" title="{{c.shortName}}"></i></span>
                             <span class="currency-name">{{c.name}}</span>
                             </a></li>
-                        </ul>
-                    </div>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-2">
                 <button type="button" class="btn btn-form-submit pull-right" ng-click="submit()">Exchange</button>
               </div>
             </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="section-payment-green">
-  <ul>
-    <li><img src="images/icon-1.png" alt="">
-      <span>LOCAL TRANSFER</span>
-    </li>
-    <li><img src="images/icon-2.png" alt="">
-      <span>cash deposit</span>
-    </li>
-    <li><img src="images/icon-3.png" alt="">
-      <!--<span>card</span>-->
-    </li>
-  </ul>  
-</section>
+  </section>
+  <section class="section-payment-green">
+    <ul>
+      <li><img src="images/icon-1.png" alt="">
+        <span>LOCAL TRANSFER</span>
+      </li>
+      <li><img src="images/icon-2.png" alt="">
+        <span>cash deposit</span>
+      </li>
+      <li><img src="images/icon-3.png" alt="">
+        <span>card</span>
+      </li>
+    </ul>
+  </section>
+  <section class="section-visa">
+    <ul>
+      <li><img src="images/visa.png" alt=""> Visa and MasterCard accepted here</li>
+      <li>Your crypto coins are converted at the best rate</li>
+    </ul>
+  </section>
 
-<!--
-<section class="section-visa">
-  <ul>
-    <li><img src="images/visa.png" alt="">
-      Visa and MasterCard accepted here</li>
-    <li>Your crypto coins are converted at the best rate</li>
-  </ul>
-</section> -->
-
-<section class="section-steps">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-5 col-sm-offset-2">
-        <h3>Buy Bitcoin in just
+  <section class="section-steps">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-sm-offset-2">
+          <h3>Buy Bitcoin in just
             <strong>3 easy steps</strong></h3>
-        <div class="tile-steps step-1 active">
-          <div class="left">
-            1
+          <div class="tile-steps step-1 active">
+            <div class="left">
+              1
+            </div>
+            <div class="right">
+              <h2>Sign Up</h2>
+              <p>Sign up for a free Buroka Bitcoin wallet on the web, iOS or Android app and complete the easy verification
+                process.</p>
+            </div>
           </div>
-          <div class="right">
-            <h2>Sign Up</h2>
-            <p>Sign up for a free Buroka Bitcoin wallet on the web, iOS or
-                Android app and complete the easy verification process.</p>
+          <div class="tile-steps step-2">
+            <div class="left">
+              2
+            </div>
+            <div class="right">
+              <h2>Transfer Money</h2>
+              <p>Select your preferred way to transfer money to your Buroka account like local bank transfer or credit card.</p>
+            </div>
           </div>
-        </div>
-        <div class="tile-steps step-2">
-          <div class="left">
-            2
+          <div class="tile-steps step-3">
+            <div class="left">
+              3
+            </div>
+            <div class="right">
+              <h2>Buy Bitcoin</h2>
+              <p>Convert your money to Bitcoin. We'll keep it secure and make it easy to spend online, send to friends, or just
+                save for investment.</p>
+            </div>
           </div>
-          <div class="right">
-            <h2>Transfer Money</h2>
-            <p>Select your preferred way to transfer money to your Buroka
-                account like local bank transfer or credit card.</p>
-          </div>
-        </div>
-        <div class="tile-steps step-3">
-          <div class="left">
-            3
-          </div>
-          <div class="right">
-            <h2>Buy Bitcoin</h2>
-            <p>Convert your money to Bitcoin. We'll keep it secure and make it
-                easy to spend online, send to friends, or just save for investment.</p>
-          </div>
-        </div>
-        <div class="text-center">
+          <div class="text-center">
             <a href="" class="btn btn-step-callout">Get Started</a>
+          </div>
+
         </div>
-        
-      </div>
-      <div class="col-xs-12 col-sm-3">
-        <div class="phone-wrapper">
+        <div class="col-xs-12 col-sm-3">
+          <div class="phone-wrapper">
             <img src="images/phone.png" alt="" class="img-responsive">
             <div class="image-tile active">1.Sign Up</div>
             <div class="image-tile">2.Transfer</div>
             <div class="image-tile">3.Buy Bitcoin</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-city">
-  <div class="container">
-  <h4 class="text-center">Why people in <strong>Nigeria</strong> <br>
-      invest in <strong>Bitcoin</strong> with <strong>Buroka</strong></h4>
-  <div class="row">
-    <div class="col-xs-12 col-sm-2 col-sm-offset-2">
-      <h6>Fast</h6>
-      <p><img src="images/city-icon-1.png" alt=""></p>
-      <p>Just enter the amount, press exchange
-          and you have your cash
-          or coins in real-time.</p>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-sm-offset-1">
-        <h6>NO HIDDEN FEES</h6>
-        <p><img src="images/city-icon-2.png" alt=""></p>
-        <p>Other cryptocurrency exchanges charge you with fees and commissions without you knowing it. We DON’T!</p>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-sm-offset-1">
-        <h6>Secure</h6>
-        <p><img src="images/city-icon-3.png" alt=""></p>
-        <p>Using our unique technology you ca be sure
-            your cryptocurrencys are safe, we are trusted by
-            more than 30,000 customers in Nigeria</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="text-center">
-        <a href="" class="btn btn-form-submit">Find out more</a>
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-
-<section class="section-feedback">
-  <div class="container">
-    <h4 class="text-center">Why our customers love us</h4>
-    <div class="row">
-      <div class="col-xs-12 col-sm-4 col-sm-offset-2">
-        <div class="media-wrapper media-fb">
-          <div class="media-title">
-              <img src="images/img-share.jpg" alt="">
-              <h2>Jack Sparrow</h2>
-              <a href="" class="btn-media btn-media-fb"><img src="images/fb-icon.png">Facebook</a>
-          </div>  
-          <div class="media-body">
-            <p>Convert your money to Bitcoin. We'll keep it secure
-                and make it easy to spend online, send to friends,
-                or just save for investment.</p>
-            <p class="date">Sept. 23</p>
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-4">
-          <div class="media-wrapper media-fb">
-              <div class="media-title">
-                  <img src="images/img-share.jpg" alt="">
-                  <h2>Jack Sparrow</h2>
-                  <a href="" class="btn-media btn-media-fb"><img src="images/fb-icon.png">Facebook</a>
-              </div>  
-              <div class="media-body">
-                <p>Convert your money to Bitcoin. We'll keep it secure
-                    and make it easy to spend online, send to friends,
-                    or just save for investment.</p>
-                <p class="date">Sept. 23</p>
-              </div>
-            </div>
+    </div>
+  </section>
+
+  <section class="section-city">
+    <div class="container">
+      <h4 class="text-center">Why people in <strong>Nigeria</strong> <br> invest in <strong>Bitcoin</strong> with <strong>Buroka</strong></h4>
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 col-sm-offset-2">
+          <h6>Fast</h6>
+          <p><img src="images/city-icon-1.png" alt=""></p>
+          <p>Just enter the amount, press exchange and you have your cash or coins in real-time.</p>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-sm-offset-1">
+          <h6>NO HIDDEN FEES</h6>
+          <p><img src="images/city-icon-2.png" alt=""></p>
+          <p>Other cryptocurrency exchanges charge you with fees and commissions without you knowing it. We DON’T!</p>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-sm-offset-1">
+          <h6>Secure</h6>
+          <p><img src="images/city-icon-3.png" alt=""></p>
+          <p>Using our unique technology you ca be sure your cryptocurrencys are safe, we are trusted by more than 30,000 customers
+            in Nigeria</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="text-center">
+            <a href="" class="btn btn-form-submit">Find out more</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+  </section>
+
+  <section class="section-feedback">
+    <div class="container">
+      <h4 class="text-center">Why our customers love us</h4>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-sm-offset-2">
           <div class="media-wrapper media-fb">
-              <div class="media-title">
-                  <img src="images/img-share.jpg" alt="">
-                  <h2>Jack Sparrow</h2>
-                  <a href="" class="btn-media btn-media-tw"><img src="images/tw-icon.png">Twitter</a>
-              </div>  
-              <div class="media-body">
-                <p>Convert your money to Bitcoin. We'll keep it secure
-                    and make it easy to spend online, send to friends,
-                    or just save for investment.</p>
-                <p class="date">Sept. 23</p>
-              </div>
+            <div class="media-title">
+              <img src="images/img-share.jpg" alt="">
+              <h2>Jack Sparrow</h2>
+              <a href="" class="btn-media btn-media-fb"><img src="images/fb-icon.png">Facebook</a>
             </div>
+            <div class="media-body">
+              <p>Convert your money to Bitcoin. We'll keep it secure and make it easy to spend online, send to friends, or just
+                save for investment.</p>
+              <p class="date">Sept. 23</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="media-wrapper media-fb">
+            <div class="media-title">
+              <img src="images/img-share.jpg" alt="">
+              <h2>Jack Sparrow</h2>
+              <a href="" class="btn-media btn-media-fb"><img src="images/fb-icon.png">Facebook</a>
+            </div>
+            <div class="media-body">
+              <p>Convert your money to Bitcoin. We'll keep it secure and make it easy to spend online, send to friends, or just
+                save for investment.</p>
+              <p class="date">Sept. 23</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-xs-12 col-sm-4">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-sm-offset-2">
           <div class="media-wrapper media-fb">
-              <div class="media-title">
-                  <img src="images/img-share.jpg" alt="">
-                  <h2>Jack Sparrow</h2>
-                  <a href="" class="btn-media btn-media-tw"><img src="images/tw-icon.png">Twitter</a>
-              </div>  
-              <div class="media-body">
-                <p>Convert your money to Bitcoin. We'll keep it secure
-                    and make it easy to spend online, send to friends,
-                    or just save for investment.</p>
-                <p class="date">Sept. 23</p>
-              </div>
+            <div class="media-title">
+              <img src="images/img-share.jpg" alt="">
+              <h2>Jack Sparrow</h2>
+              <a href="" class="btn-media btn-media-tw"><img src="images/tw-icon.png">Twitter</a>
             </div>
+            <div class="media-body">
+              <p>Convert your money to Bitcoin. We'll keep it secure and make it easy to spend online, send to friends, or just
+                save for investment.</p>
+              <p class="date">Sept. 23</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="media-wrapper media-fb">
+            <div class="media-title">
+              <img src="images/img-share.jpg" alt="">
+              <h2>Jack Sparrow</h2>
+              <a href="" class="btn-media btn-media-tw"><img src="images/tw-icon.png">Twitter</a>
+            </div>
+            <div class="media-body">
+              <p>Convert your money to Bitcoin. We'll keep it secure and make it easy to spend online, send to friends, or just
+                save for investment.</p>
+              <p class="date">Sept. 23</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section-bitcoin text-center">
-  <h2>Join for free</h2>
-  <h3>and buy or sell <strong>Bitcoin today!</strong></h3>
-  <a href="" class="btn btn-step-callout">Sign up</a>
-</section>
+  <section class="section-bitcoin text-center">
+    <h2>Join for free</h2>
+    <h3>and buy or sell <strong>Bitcoin today!</strong></h3>
+    <a href="" class="btn btn-step-callout">Sign up</a>
+  </section>
 
-<section class="section-journals text-center">
-  <h2>As seen in</h2>
-  <ul>
-    <li><a href="https://www.bloomberg.com/news/articles/2016-12-21/who-owns-blockchain-goldman-bofa-amass-patents-for-coming-wars" target="_blank"><img src="images/journals/1.png" alt=""></a></li>
-    <li><a href="https://www.theguardian.com/world/2016/aug/03/could-bitcoin-change-the-game-in-africa" target="_blank"><img src="images/journals/2.png" alt=""></a></li>
-    <li><a href="https://www.coindesk.com/category/markets-news/markets-markets-news/markets-bitcoin/" target="_blank"><img src="images/journals/3.png" alt=""></a></li>
-    <li><a href="http://www.bbc.com/news/business-31735976" target="_blank"><img src="images/journals/4.png" alt=""></a></li>
-    <li><a href="https://blogs.wsj.com/moneybeat/2014/07/17/south-africas-payfast-incorporates-bitcoin-as-payment-option/" target="_blank"><img src="images/journals/5.png" alt=""></a></li>
-    <li><a href="https://www.economist.com/blogs/baobab/2014/06/cash-transfers-africa" target="_blank"><img src="images/journals/6.png" alt=""></a></li> 
-  </ul>
-</section>
+  <section class="section-journals text-center">
+    <h2>As seen in</h2>
+    <ul>
+      <li><a href="https://www.bloomberg.com/news/articles/2016-12-21/who-owns-blockchain-goldman-bofa-amass-patents-for-coming-wars"
+          target="_blank"><img src="images/journals/1.png" alt=""></a></li>
+      <li><a href="https://www.theguardian.com/world/2016/aug/03/could-bitcoin-change-the-game-in-africa" target="_blank"><img src="images/journals/2.png" alt=""></a></li>
+      <li><a href="https://www.coindesk.com/category/markets-news/markets-markets-news/markets-bitcoin/" target="_blank"><img src="images/journals/3.png" alt=""></a></li>
+      <li><a href="http://www.bbc.com/news/business-31735976" target="_blank"><img src="images/journals/4.png" alt=""></a></li>
+      <li><a href="https://blogs.wsj.com/moneybeat/2014/07/17/south-africas-payfast-incorporates-bitcoin-as-payment-option/"
+          target="_blank"><img src="images/journals/5.png" alt=""></a></li>
+      <li><a href="https://www.economist.com/blogs/baobab/2014/06/cash-transfers-africa" target="_blank"><img src="images/journals/6.png" alt=""></a></li>
+    </ul>
+  </section>
 
-<section class="section-connect">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <h2>Connect with us on</h2>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <ul class="social-connect">
-          <li><a href=""><img src="images/social/1.png" alt=""></a></li>
-          <li><a href=""><img src="images/social/2.png" alt=""></a></li>
-          <li><a href=""><img src="images/social/3.png" alt=""></a></li>
-          <li><a href=""><img src="images/social/4.png" alt=""></a></li>
-        </ul>
+  <section class="section-connect">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <h2>Connect with us on</h2>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <ul class="social-connect">
+            <li><a href=""><img src="images/social/1.png" alt=""></a></li>
+            <li><a href=""><img src="images/social/2.png" alt=""></a></li>
+            <li><a href=""><img src="images/social/3.png" alt=""></a></li>
+            <li><a href=""><img src="images/social/4.png" alt=""></a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-2 col-sm-offset-2">
-        <dl class="footer-links-group">
-          <dt>Company</dt>
-          <dd><a href="">About Us</a></dd>
-          <dd><a href="">Blog & News</a></dd>
-        </dl>
-      </div>
-      <div class="col-xs-12 col-sm-2">
-        <dl class="footer-links-group">
-          <dt>Help & Support</dt>
-          <dd><a href="/what-is-bitcoin">What is Bitcoin</a></dd>
-          <dd><a href="/faq">FAQ</a></dd>
-          <dd><a href="">How it Works</a></dd>
-          <dd><a href="">Help Center</a></dd>
-        </dl>
-      </div>
-      <div class="col-xs-12 col-sm-2">
-        <dl class="footer-links-group">
+  <footer ng-controller="footerController">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 col-sm-offset-2">
+          <dl class="footer-links-group">
+            <dt>Company</dt>
+            <dd><a href="">About Us</a></dd>
+            <dd><a href="">Blog & News</a></dd>
+          </dl>
+        </div>
+        <div class="col-xs-12 col-sm-2">
+          <dl class="footer-links-group">
+            <dt>Help & Support</dt>
+            <dd><a href="/what-is-bitcoin">What is Bitcoin</a></dd>
+            <dd><a href="/faq">FAQ</a></dd>
+            <dd><a href="" ng-click="howItWorks(event)">How it works</a></dd>
+            <dd><a href="">Help Center</a></dd>
+          </dl>
+        </div>
+        <div class="col-xs-12 col-sm-2">
+          <dl class="footer-links-group">
             <dt>other</dt>
             <dd><a href="/aml-kyc-policy">AML/KYC Policy</a></dd>
             <dd>
-                <a href="/anti-fraud-policy">Anti-fraud Policy</a>
+              <a href="/anti-fraud-policy">Anti-fraud Policy</a>
             </dd>
             <dd>
-                <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/privacy-policy">Privacy Policy</a>
             </dd>
             <dd>
-                <a href="/refund">Refund Policy</a>
+              <a href="/refund">Refund Policy</a>
             </dd>
             <dd>
-                <a href="/risk-warning">Risk Warning</a>
+              <a href="/risk-warning">Risk Warning</a>
             </dd>
             <dd>
-                <a href="/terms">Terms of Use</a>
+              <a href="/terms">Terms of Use</a>
             </dd>
-        </dl>
-    </div>
-      <div class="col-xs-12 col-sm-2">
+          </dl>
+        </div>
+        <div class="col-xs-12 col-sm-2">
           <dl class="footer-links-group">
             <dt>Contact us</dt>
           </dl>
+        </div>
       </div>
     </div>
-  </div>
-  <hr>
-  <p>© 2017 buroka. All rights reserved | GRAPHORIC</p>
-</footer>
-<register-popup opened="false"></register-popup>
+    <hr>
+    <p>© 2017 buroka. All rights reserved | GRAPHORIC</p>
+  </footer>
+  <register-popup opened="false"></register-popup>
+  <how-it-works-pop-up howopened="false"></how-it-works-pop-up>
+
 </body>
 </body>
+
 </html>

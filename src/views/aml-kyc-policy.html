@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="buroka">
+
 <head>
   <meta charset="UTF-8">
   <title>Buroka - Crypto Exchange</title>
@@ -9,159 +10,207 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bundle.css">
 </head>
+
 <body>
 
 
-<div id="external-wrapper"></div>  
-<div id="pop-up-wrapper"></div>
-<header>
-  <nav class="mobile-menu">
-    <a id="sidenav-button--slide-left" class="ln-menu sidenav-button--slide-left" href="javascript:void(0)">
-      <svg height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-      </svg>
-    </a>
-    <div class="mobile-menu-wrapper">
+  <div id="external-wrapper"></div>
+  <div id="pop-up-wrapper"></div>
+  <header ng-controller="headerController">
+    <nav class="mobile-menu">
+      <a id="sidenav-button--slide-left" class="ln-menu sidenav-button--slide-left" href="javascript:void(0)">
+        <svg height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+      </a>
+      <div class="mobile-menu-wrapper">
         <div class="text-center">
           <a href="javascript:void(0)" class="sidenav-menu__close ln-close">
-              <svg width="24px" height="24px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g stroke="none" stroke-width="1" fill="#000" fill-rule="evenodd">
-                  <g transform="translate(-35.000000, -42.000000)">
-                    <polygon points="53 49.875 39.3087499 49.875 45.5975 43.5862498 44 42 35 51 44 60 45.5862498 58.4137501 39.3087499 52.125 53 52.125"></polygon>
-                  </g>
+            <svg width="24px" height="24px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="#000" fill-rule="evenodd">
+                <g transform="translate(-35.000000, -42.000000)">
+                  <polygon points="53 49.875 39.3087499 49.875 45.5975 43.5862498 44 42 35 51 44 60 45.5862498 58.4137501 39.3087499 52.125 53 52.125"></polygon>
                 </g>
-              </svg>
-            </a>
+              </g>
+            </svg>
+          </a>
         </div>
-        <br> 
+        <br>
         <ul class="navbar-lg">
-            <li><a href="/">How it works</a></li>
-            <li><a href="/faq">Faq</a></li>
-            <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
-            <li><a href="">Login</a></li>
-            <li><a href="" class="btn btn-register">Register</a></li>
+          <li><a href="" ng-click="howItWorks(event)">How it works</a></li>
+          <li><a href="/faq">Faq</a></li>
+          <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
+          <li><a href="">Login</a></li>
+          <li><a href="" class="btn btn-register">Register</a></li>
         </ul>
-    </div>  
-  </nav>
-  <div class="container">
+      </div>
+    </nav>
+    <div class="container">
       <nav>
         <div class="row">
           <div class="col-xs-12 col-sm-3">
             <a href="/"><img src="images/logo.png" alt="" class="pull-left logo"></a>
           </div>
           <div class="col-xs-12 col-sm-9">
-              <ul class="navbar-lg">
-                  <li><a href="/">How it works</a></li>
-                  <li><a href="/faq">Faq</a></li>
-                  <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
-                  <li><a href="">Login</a></li>
-                  <li><a href="" class="btn btn-register">Register</a></li>
-              </ul>
+            <ul class="navbar-lg">
+              <li><a href="" ng-click="howItWorks(event)">How it works</a></li>
+              <li><a href="/faq">Faq</a></li>
+              <li><a href="/what-is-bitcoin">What is bitcoin</a></li>
+              <li><a href="">Login</a></li>
+              <li><a href="" class="btn btn-register">Register</a></li>
+            </ul>
           </div>
         </div>
       </nav>
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
           <h1 class="text-center">Buroka makes it <strong>safe</strong> & <strong>easy</strong> to
-              <strong>buy</strong> and <strong>sell bitcoin</strong> in <strong>nigeria</strong>
-              </h1>
+            <strong>buy</strong> and <strong>sell bitcoin</strong> in <strong>nigeria</strong>
+          </h1>
         </div>
       </div>
     </div>
-</header>
+  </header>
 
-<section class="section-faq">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-3 col-xs-12">
-        <h1 class="heading-rotate-90 heading-page-rw">
+  <section class="section-faq">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-xs-12">
+          <h1 class="heading-rotate-90 heading-page-rw">
             AML/KYC Policy
-        </h1>
-      </div>
-      <div class="col-sm-9 col-xs-12">
-         <h2>Introduction</h2>
-         <p>Buroka Anti-Money Laundering and Know Your Customer Policy (hereinafter - the “AML/KYC Policy”) is designated to prevent and mitigate possible risks of Buroka being involved in any kind of illegal activity.</p>
-         <p>Both international and local regulations require Buroka to implement effective internal procedures and mechanisms to prevent money laundering, terrorist financing, drug and human trafficking, proliferation of weapons of mass destruction, corruption and bribery and to take action in case of any form of suspicious activity from its Users.</p>
-         <p>AML/KYC Policy covers the following matters:</p>
-         <p>1.	Verification procedures.</p>
-         <p>2.	Compliance Officer.</p>
-         <p>3.	Monitoring Transactions.</p>
-         <p>4.	Risk Assessment.</p>
-         <h2>1. Verification procedures</h2>
-         <p>One of the international standards for preventing illegal activity is customer due diligence (“CDD”). According to CDD, Buroka establishes its own verification procedures within the standards of anti-money laundering and “Know Your Customer” frameworks.</p>
-         <h2>1.1. Identity verification</h2>
-         <p>Buroka’s identity verification procedure requires the User to provide Buroka with reliable, independent source documents, data or information (e.g., national ID, international passport, bank statement, utility bill). For such purposes Buroka reserves the right to collect User’s identification information for the AML/KYC Policy purposes.</p>
-         <p>Buroka will take steps to confirm the authenticity of documents and information provided by the Users. All legal methods for double-checking identification information will be used and Buroka reserves the right to investigate certain Users who have been determined to be risky or suspicious.</p>
-         <p>Buroka reserves the right to verify User’s identity in an on-going basis, especially when their identification information has been changed or their activity seemed to be suspicious (unusual for the particular User). In addition, Buroka reserves the right to request up-to-date documents from the Users, even though they have passed identity verification in the past.</p>
-         <p>User’s identification information will be collected, stored, shared and protected strictly in accordance with the Buroka’s Privacy Policy and related regulations.</p>
-         <p>Once the User’s identity has been verified, Buroka is able to remove itself from potential legal liability in a situation where its Services are used to conduct illegal activity.</p>
-         <h2>1.2. Card verification</h2>
-         <p>The Users who are intended to use payment cards in connection with the Buroka’s Services have to pass card verification in accordance with instructions available on the Buroka’s Site.</p>
-         <h2>2. Compliance Officer</h2>
-         <p>The Compliance Officer is the person, duly authorized by Buroka, whose duty is to ensure the effective implementation and enforcement of the AML/KYC Policy. It is the Compliance Officer’s responsibility to supervise all aspects of Buroka’s anti-money laundering and counter-terrorist financing, including but not limited to:</p>
-         <p>a. Collecting Users’ identification information. b. Establishing and updating internal policies and procedures for the completion, review, submission and retention of all reports and records required under the applicable laws and regulations. c. Monitoring transactions and investigating any significant deviations from normal activity. d. Implementing a records management system for appropriate storage and retrieval of documents, files, forms and logs. e. Updating risk assessment regularly. f. Providing law enforcement with information as required under the applicable laws and regulations.</p>
-         <p>The Compliance Officer is entitled to interact with law enforcement, which are involved in prevention of money laundering, terrorist financing and other illegal activity.</p>
-         <h2>3. Monitoring Transactions</h2>
-         <p>The Users are known not only by verifying their identity (who they are) but, more importantly, by analyzing their transactional patterns (what they do). Therefore, Buroka relies on data analysis as a risk-assessment and suspicion detection tool. Buroka performs a variety of compliance-related tasks, including capturing data, filtering, record-keeping, investigation management, and reporting. System functionalities include:</p>
-         <p>1) Daily check of Users against recognized “black lists” (e.g. OFAC), aggregating transfers by multiple data points, placing Users on watch and service denial lists, opening cases for investigation where needed, sending internal communications and filling out statutory reports, if applicable;</p>
-         <p>2) Case and document management.</p>
-         <p>With regard to the AML/KYC Policy, Buroka will monitor all transactions and it reserves the right to:</p>
-         <ul>
-             <li>ensure that transactions of suspicious nature are reported to the proper law enforcement through the Compliance Officer;</li>
-             <li>request the User to provide any additional information and documents in case of suspicious transactions;</li>
-             <li>suspend or terminate User’s Account when Buroka has reasonable suspicion that such User engaged in illegal activity.</li>
-         </ul>
-         <p>The above list is not exhaustive and the Compliance Officer will monitor Users’ transactions on a day-to-day basis in order to define whether such transactions are to be reported and treated as suspicious or are to be treated as <em>bona fide</em>.</p>
-         <h2>4. Risk Assessment</h2>
-         <p>Buroka, in line with the international requirements, has adopted a risk-based approach to combating money laundering and terrorist financing. By adopting a risk-based approach, Buroka is able to ensure that measures to prevent or mitigate money laundering and terrorist financing are commensurate to the identified risks. This will allow resources to be allocated in the most efficient ways. The principle is that resources should be directed in accordance with priorities so that the greatest risks receive the highest attention.</p>
+          </h1>
+        </div>
+        <div class="col-sm-9 col-xs-12">
+          <h2>Introduction</h2>
+          <p>Buroka Anti-Money Laundering and Know Your Customer Policy (hereinafter - the “AML/KYC Policy”) is designated to
+            prevent and mitigate possible risks of Buroka being involved in any kind of illegal activity.</p>
+          <p>Both international and local regulations require Buroka to implement effective internal procedures and mechanisms
+            to prevent money laundering, terrorist financing, drug and human trafficking, proliferation of weapons of mass
+            destruction, corruption and bribery and to take action in case of any form of suspicious activity from its Users.</p>
+          <p>AML/KYC Policy covers the following matters:</p>
+          <p>1. Verification procedures.</p>
+          <p>2. Compliance Officer.</p>
+          <p>3. Monitoring Transactions.</p>
+          <p>4. Risk Assessment.</p>
+          <h2>1. Verification procedures</h2>
+          <p>One of the international standards for preventing illegal activity is customer due diligence (“CDD”). According
+            to CDD, Buroka establishes its own verification procedures within the standards of anti-money laundering and
+            “Know Your Customer” frameworks.</p>
+          <h2>1.1. Identity verification</h2>
+          <p>Buroka’s identity verification procedure requires the User to provide Buroka with reliable, independent source
+            documents, data or information (e.g., national ID, international passport, bank statement, utility bill). For
+            such purposes Buroka reserves the right to collect User’s identification information for the AML/KYC Policy purposes.</p>
+          <p>Buroka will take steps to confirm the authenticity of documents and information provided by the Users. All legal
+            methods for double-checking identification information will be used and Buroka reserves the right to investigate
+            certain Users who have been determined to be risky or suspicious.</p>
+          <p>Buroka reserves the right to verify User’s identity in an on-going basis, especially when their identification
+            information has been changed or their activity seemed to be suspicious (unusual for the particular User). In
+            addition, Buroka reserves the right to request up-to-date documents from the Users, even though they have passed
+            identity verification in the past.</p>
+          <p>User’s identification information will be collected, stored, shared and protected strictly in accordance with the
+            Buroka’s Privacy Policy and related regulations.</p>
+          <p>Once the User’s identity has been verified, Buroka is able to remove itself from potential legal liability in a
+            situation where its Services are used to conduct illegal activity.</p>
+          <h2>1.2. Card verification</h2>
+          <p>The Users who are intended to use payment cards in connection with the Buroka’s Services have to pass card verification
+            in accordance with instructions available on the Buroka’s Site.</p>
+          <h2>2. Compliance Officer</h2>
+          <p>The Compliance Officer is the person, duly authorized by Buroka, whose duty is to ensure the effective implementation
+            and enforcement of the AML/KYC Policy. It is the Compliance Officer’s responsibility to supervise all aspects
+            of Buroka’s anti-money laundering and counter-terrorist financing, including but not limited to:</p>
+          <p>a. Collecting Users’ identification information. b. Establishing and updating internal policies and procedures
+            for the completion, review, submission and retention of all reports and records required under the applicable
+            laws and regulations. c. Monitoring transactions and investigating any significant deviations from normal activity.
+            d. Implementing a records management system for appropriate storage and retrieval of documents, files, forms
+            and logs. e. Updating risk assessment regularly. f. Providing law enforcement with information as required under
+            the applicable laws and regulations.</p>
+          <p>The Compliance Officer is entitled to interact with law enforcement, which are involved in prevention of money
+            laundering, terrorist financing and other illegal activity.</p>
+          <h2>3. Monitoring Transactions</h2>
+          <p>The Users are known not only by verifying their identity (who they are) but, more importantly, by analyzing their
+            transactional patterns (what they do). Therefore, Buroka relies on data analysis as a risk-assessment and suspicion
+            detection tool. Buroka performs a variety of compliance-related tasks, including capturing data, filtering, record-keeping,
+            investigation management, and reporting. System functionalities include:</p>
+          <p>1) Daily check of Users against recognized “black lists” (e.g. OFAC), aggregating transfers by multiple data points,
+            placing Users on watch and service denial lists, opening cases for investigation where needed, sending internal
+            communications and filling out statutory reports, if applicable;</p>
+          <p>2) Case and document management.</p>
+          <p>With regard to the AML/KYC Policy, Buroka will monitor all transactions and it reserves the right to:</p>
+          <ul>
+            <li>ensure that transactions of suspicious nature are reported to the proper law enforcement through the Compliance
+              Officer;</li>
+            <li>request the User to provide any additional information and documents in case of suspicious transactions;</li>
+            <li>suspend or terminate User’s Account when Buroka has reasonable suspicion that such User engaged in illegal activity.</li>
+          </ul>
+          <p>The above list is not exhaustive and the Compliance Officer will monitor Users’ transactions on a day-to-day basis
+            in order to define whether such transactions are to be reported and treated as suspicious or are to be treated
+            as <em>bona fide</em>.</p>
+          <h2>4. Risk Assessment</h2>
+          <p>Buroka, in line with the international requirements, has adopted a risk-based approach to combating money laundering
+            and terrorist financing. By adopting a risk-based approach, Buroka is able to ensure that measures to prevent
+            or mitigate money laundering and terrorist financing are commensurate to the identified risks. This will allow
+            resources to be allocated in the most efficient ways. The principle is that resources should be directed in accordance
+            with priorities so that the greatest risks receive the highest attention.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-2 col-sm-offset-2">
-        <dl class="footer-links-group">
-          <dt>Company</dt>
-          <dd><a href="">About Us</a></dd>
-          <dd><a href="">Blog & News</a></dd>
-        </dl>
-      </div>
-      <div class="col-xs-12 col-sm-2">
-        <dl class="footer-links-group">
-          <dt>Help & Support</dt>
-          <dd><a href="">What is Bitcoin</a></dd>
-          <dd><a href="">FAQ</a></dd>
-          <dd><a href="">How it Works</a></dd>
-          <dd><a href="">Help Center</a></dd>
-        </dl>
-      </div>
-      <div class="col-xs-12 col-sm-2">
+  </section>
+  <footer ng-controller="footerController">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 col-sm-offset-2">
+          <dl class="footer-links-group">
+            <dt>Company</dt>
+            <dd><a href="">About Us</a></dd>
+            <dd><a href="">Blog & News</a></dd>
+          </dl>
+        </div>
+        <div class="col-xs-12 col-sm-2">
+          <dl class="footer-links-group">
+            <dt>Help & Support</dt>
+            <dd><a href="/what-is-bitcoin">What is Bitcoin</a></dd>
+            <dd><a href="/faq">FAQ</a></dd>
+            <dd><a href="" ng-click="howItWorks(event)">How it works</a></dd>
+            <dd><a href="">Help Center</a></dd>
+          </dl>
+        </div>
+        <div class="col-xs-12 col-sm-2">
           <dl class="footer-links-group">
             <dt>other</dt>
             <dd><a href="/aml-kyc-policy">AML/KYC Policy</a></dd>
-            <dd><a href="/anti-fraud-policy">Anti-fraud Policy</a></dd>
-            <dd><a href="/privacy-policy">Privacy Policy</a></dd>
-            <dd><a href="/refund">Refund Policy</a></dd>
-            <dd><a href="/risk-warning">Risk Warning</a></dd>
-            <dd><a href="/terms">Terms of Use</a></dd>
+            <dd>
+              <a href="/anti-fraud-policy">Anti-fraud Policy</a>
+            </dd>
+            <dd>
+              <a href="/privacy-policy">Privacy Policy</a>
+            </dd>
+            <dd>
+              <a href="/refund">Refund Policy</a>
+            </dd>
+            <dd>
+              <a href="/risk-warning">Risk Warning</a>
+            </dd>
+            <dd>
+              <a href="/terms">Terms of Use</a>
+            </dd>
           </dl>
-      </div>
-      <div class="col-xs-12 col-sm-2">
+        </div>
+        <div class="col-xs-12 col-sm-2">
           <dl class="footer-links-group">
             <dt>Contact us</dt>
           </dl>
+        </div>
       </div>
     </div>
-  </div>
-  <hr>
-  <p>© 2017 buroka. All rights reserved | GRAPHORIC</p>
-</footer>
-<register-popup opened="false"></register-popup>
+    <hr>
+    <p>© 2017 buroka. All rights reserved | GRAPHORIC</p>
+  </footer>
+  <register-popup opened="false"></register-popup>
+  <how-it-works-pop-up howopened="false"></how-it-works-pop-up>
 
-<script type="text/javascript" src="bundle.js"></script>
+  <script type="text/javascript" src="bundle.js"></script>
 </body>
 </body>
+
 </html>
