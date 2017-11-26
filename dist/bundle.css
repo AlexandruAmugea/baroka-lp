@@ -1086,6 +1086,76 @@ footer p {
   margin-left: -25px;
   margin-top: -15px; }
 
+/* What is bitcoin sections */
+.section-what {
+  padding: 100px 0 0px;
+  background: url("/images/wib/pattern-1.png") no-repeat right 20px, #f3f3f3; }
+  .section-what h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 86px;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    color: #000000;
+    font-weight: 100;
+    width: 410px;
+    margin-top: 530px;
+    text-transform: uppercase;
+    position: relative; }
+    .section-what h4:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -25px;
+      height: 25px;
+      width: 150px;
+      background: #f9b700; }
+  .section-what .section-what-inner {
+    padding: 0 30px 0 60px; }
+    .section-what .section-what-inner img {
+      margin: 0 0 30px 0; }
+    .section-what .section-what-inner p {
+      font-size: 20px;
+      margin-bottom: 30px; }
+
+.section-safe {
+  background: url("/images/wib/pattern-2.png") no-repeat left 20px, #f3f3f3; }
+  .section-safe img {
+    margin: 50px 0 25px; }
+  .section-safe h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 86px;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    color: #000000;
+    font-weight: 100;
+    width: 510px;
+    margin-top: 410px;
+    text-transform: uppercase; }
+  .section-safe p {
+    font-size: 20px; }
+
+.border-bottom {
+  width: 150px;
+  height: 25px;
+  margin: 15px auto; }
+  .border-bottom.border-green {
+    background: #77b239; }
+
+.section-dollar {
+  background: url("/images/wib/pattern-3.png") no-repeat right -50px, #f3f3f3;
+  padding: 50px 0 100px; }
+  .section-dollar h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 86px;
+    color: #000000;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+  .section-dollar p {
+    font-size: 20px; }
+  .section-dollar img {
+    margin-top: -50px; }
+
 body {
   font-family: "Poppins", sans-serif; }
 
