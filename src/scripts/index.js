@@ -67,13 +67,17 @@ var app = angular.module('buroka', [
     };
 
     $scope.$watch('input.sell', function(val){
-      $scope.input.get = exchangeFactory.calculateCurrency(val);
+        $scope.input.get = exchangeFactory.calculateCurrency(val);
     });
 
     $scope.openRegisterPopup = false;
 
     $scope.submit = function(){
       $rootScope.$emit('open:registerPopup');
+    };
+
+    $scope.switchAmmounts = function(){
+      $scope.input.sell = $scope.input.get;
     };
 
   }]);

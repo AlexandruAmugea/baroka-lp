@@ -128,4 +128,12 @@ html input[disabled] {
     right: -44px;
     top: 10px;
     font-size: 28px;
+    display: block;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        cursor: pointer;
+        font-size: 32px;
+        top: 6px;
+    }
 }
