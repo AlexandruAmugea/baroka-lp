@@ -132,20 +132,18 @@ var app = angular.module('buroka', [
        + '</div>',
       controller: ['$scope', '$rootScope', function($scope, $rootScope) {
         var body = document.getElementsByTagName('body')[0];
+        body.addEventListener('keyup', (e) =>{
+          if(e.keyCode === 27 && $scope.opened) {
+            $scope.$apply(function(){
+              $scope.opened = !$scope.opened;
+            });
+            unblockBody();
+          }
+        });
         function scrollAndBlock(){
           window.scrollTo( 0, 0 );
           body.style.overflow = 'hidden'; 
-          body.addEventListener('keyup', (e) =>{
-            if(e.keyCode === 27) {
-              $scope.$apply(function(){
-                $scope.opened = !$scope.opened;
-              });
-              unblockBody();
-              body.removeEventListener('keyup', () => {
-                console.log('removed');
-              }, false);
-            }
-          });
+          
         }
 
         function unblockBody(){
