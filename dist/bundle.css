@@ -827,14 +827,14 @@ header {
   padding: 55px 0 85px;
   background: url("/images/header-bg.jpg") no-repeat left top;
   background-size: cover;
-  border-bottom: 5px solid #77b239; }
+  border-bottom: 5px solid #14ae94; }
 
 section.form-exchange {
   padding: 50px 0; }
 
 .section-payment-green {
   padding: 25px 0 20px;
-  background-color: #77b239; }
+  background-color: #14ae94; }
 
 .section-visa {
   background-color: #1a1c2b;
@@ -1000,7 +1000,7 @@ section.form-exchange {
   position: absolute;
   width: 70px;
   height: 3px;
-  background: #77b239;
+  background: #14ae94;
   left: calc(50% - 35px);
   bottom: -10px; }
 
@@ -1042,7 +1042,7 @@ section.form-exchange {
   position: absolute;
   width: 70px;
   height: 3px;
-  background: #77b239;
+  background: #14ae94;
   left: calc(50% - 35px);
   bottom: -10px; }
 
@@ -1053,7 +1053,7 @@ section.form-exchange {
 .section-connect h2 {
   text-align: right;
   color: #000000;
-  border-right: 2px solid #77b239;
+  border-right: 2px solid #14ae94;
   padding: 25px 30px;
   font-weight: 700;
   font-size: 20px;
@@ -1246,7 +1246,7 @@ p {
   display: inline-block;
   margin: 0 1.3rem 1.3rem 0;
   transition: 0.1s ease all;
-  color: #77b239; }
+  color: #14ae94; }
 
 h1.heading-rotate-90 {
   font-family: 'Montserrat', sans-serif;
@@ -1314,7 +1314,7 @@ ul.navbar-lg li a {
 
 ul.navbar-lg li a:hover,
 ul.navbar-lg li a:focus {
-  color: #77b239;
+  color: #14ae94;
   text-decoration: none;
   transition: .25s all ease; }
 
@@ -1378,7 +1378,7 @@ ul.navbar-lg li:last-child a:focus {
 
 .mobile-menu ul.navbar-lg li a:hover,
 .mobile-menu ul.navbar-lg li a:focus {
-  color: #77b239;
+  color: #14ae94;
   transition: .25s all ease; }
 
 .mobile-menu ul.navbar-lg li:last-child a {
@@ -1448,7 +1448,7 @@ ul.navbar-lg li:last-child a:focus {
       font-weight: 600; }
 
 .btn.btn-register {
-  background-color: #77b239;
+  background-color: #14ae94;
   padding: 10px 40px;
   border-radius: 30px;
   text-transform: uppercase;
@@ -1456,7 +1456,7 @@ ul.navbar-lg li:last-child a:focus {
 
 .btn.btn-register:hover,
 .btn.btn-register:focus {
-  background-color: #84c242;
+  background-color: #17c5a7;
   transition: .25s all ease; }
 
 .btn.btn-step-callout {
@@ -1478,13 +1478,13 @@ ul.navbar-lg li:last-child a:focus {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   border-radius: 30px;
-  background-color: #77b239;
+  background-color: #14ae94;
   text-transform: uppercase;
   color: #ffffff; }
 
 .btn.btn-form-submit:hover,
 .btn.btn-form-submit:focus {
-  background-color: #84c242;
+  background-color: #17c5a7;
   transition: .25s all ease; }
 
 .btn-media-fb {
@@ -1525,7 +1525,7 @@ ul.navbar-lg li:last-child a:focus {
   position: relative;
   height: 54px;
   box-shadow: none;
-  border-left: 1px solid #77b239; }
+  border-left: 1px solid #14ae94; }
 
 .btn.btn-select {
   width: 100%;
@@ -1635,7 +1635,7 @@ ul.navbar-lg li:last-child a:focus {
 
 .input-wrapper {
   padding: 1px;
-  border: 1px solid #77b239;
+  border: 1px solid #14ae94;
   border-left-color: #23a58b;
   border-top-color: #23a58b;
   border-radius: 20px;
@@ -1668,7 +1668,7 @@ ul.navbar-lg li:last-child a:focus {
   left: 15px;
   top: 17px;
   font-size: 15px;
-  color: #77b239;
+  color: #14ae94;
   z-index: 100;
   font-weight: 700;
   text-transform: uppercase; }
@@ -1679,7 +1679,7 @@ ul.navbar-lg li:last-child a:focus {
   left: 15px;
   top: 17px;
   font-size: 15px;
-  color: #77b239;
+  color: #14ae94;
   z-index: 100;
   font-weight: 700;
   text-transform: uppercase; }
@@ -1803,8 +1803,8 @@ html input[disabled] {
 
 .register-poup--body .btn.btn-step-callout {
   background: transparent;
-  border: 1px solid #77b239;
-  color: #77b239; }
+  border: 1px solid #14ae94;
+  color: #14ae94; }
 
 .pop-up-how {
   display: none;
