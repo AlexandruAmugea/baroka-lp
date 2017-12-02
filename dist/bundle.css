@@ -837,7 +837,7 @@ section.form-exchange {
   background-color: #14ae94; }
 
 .section-visa {
-  background-color: #1a1c2b;
+  background-color: #20243d;
   padding: 8px 0; }
 
 .section-steps {
@@ -1345,7 +1345,7 @@ ul.navbar-lg li:last-child a:focus {
   height: 100%;
   width: 250px;
   background: #ffffff;
-  border-right: 1px solid #1a1c2b;
+  border-right: 1px solid #20243d;
   padding: 25px 0;
   transition: .25s all ease;
   z-index: 101; }
@@ -1464,13 +1464,13 @@ ul.navbar-lg li:last-child a:focus {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   border-radius: 30px;
-  background-color: #1a1c2b;
+  background-color: #20243d;
   text-transform: uppercase;
   color: #ffffff; }
 
 .btn.btn-step-callout:hover,
 .btn.btn-step-callout:focus {
-  background-color: #24263b;
+  background-color: #292e4e;
   transition: .25s all ease; }
 
 .btn.btn-form-submit {
