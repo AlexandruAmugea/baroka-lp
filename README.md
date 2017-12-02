@@ -1,14 +1,15 @@
-# Buroka crypotocurency
-Requirements: Node js , Webpack 1, Sass
+## Buroka Crypto Exchange
 
-Install depedencies: npm install
+**Requirements**: Node JS, Webpack
 
-Run in Dev mode: npm run dev
+**Install depedencies**: *npm install*
 
-Build: npm run build 
+**Run in Dev mode**: *npm run dev*
 
-Sources are in dist folder
+**Build sources for deployment**: *npm run build*
 
-## Deployment to Huroku
-heroku login 
-git push heroku master 
+## Deployment
+
+**Master branch when changed triggers automatic deploy to Heroku**
+##
+**Website**: https://buroka.herokuapp.com/
