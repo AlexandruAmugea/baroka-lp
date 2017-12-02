@@ -1471,7 +1471,8 @@ ul.navbar-lg li:last-child a:focus {
   border-radius: 30px;
   background-color: #20243d;
   text-transform: uppercase;
-  color: #ffffff; }
+  color: #ffffff;
+  margin-top: 20px; }
 
 .btn.btn-step-callout:hover,
 .btn.btn-step-callout:focus {

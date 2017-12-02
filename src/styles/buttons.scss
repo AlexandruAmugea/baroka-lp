@@ -14,6 +14,8 @@
 
 .btn.btn-step-callout {
     @include button($dark-blue );
+    margin-top: 20px;
+
 }
 
 .btn.btn-step-callout:hover,

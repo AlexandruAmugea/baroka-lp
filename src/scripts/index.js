@@ -187,11 +187,27 @@ var app = angular.module('buroka', [
       template: '<div class="pop-up-how-wrapper" ng-class="{ active : howopened === true}" ng-click="close()"></div>'
        + '<div class="pop-up-how" ng-class="{ active : howopened === true}" ng-click="close()">'
        + '<div class="pop-up-how--body text-center" ng-class="{ active : howopened === true}">'
-       + '<span class="register-poup--close-btn" ng-click="close()">x</span>'
        + '<img src="images/how-it-works.jpg" class="img-responsive" />'
        + '</div></div>',
       controller: ['$scope', '$rootScope', function($scope, $rootScope) {
         var body = document.getElementsByTagName('body')[0];
+        var popUp = document.getElementsByClassName('pop-up-how--body')[0];
+        var popUpWrapper = document.querySelector('.pop-up-how');
+        var img = document.querySelector('.pop-up-how--body img');
+
+        function calculateHeight(){
+          var windowHeight = window.innerHeight;
+          var windowWidth = window.innerWidth;
+        
+          popUp.style.height = windowHeight / 1.5 + 'px';
+          img.style.height = windowHeight / 1.5 + 'px';
+          img.style.width = 'auto';
+          setTimeout(function(){
+            var imgWidth = img.offsetWidth;
+            var leftPopUp = (windowWidth - imgWidth)/2;
+            popUpWrapper.style.left = leftPopUp + 'px';
+          }, 200);
+        }
 
         function scrollAndBlock(){
           window.scrollTo( 0, 0 );
@@ -203,6 +219,7 @@ var app = angular.module('buroka', [
         }
 
         $rootScope.$on('open:howItWorks', function(){
+          calculateHeight();
           $scope.howopened = true;
           scrollAndBlock();
         });
