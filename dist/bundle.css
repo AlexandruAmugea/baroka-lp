@@ -1436,7 +1436,7 @@ ul.navbar-lg li:last-child a:focus {
     top: 225px;
     min-width: 500px;
     height: 50px;
-    border-bottom: 10px solid #77b239;
+    border-bottom: 10px solid #14ae94;
     text-align: right;
     display: none; }
     .section-faq-tab-section .section-faq-tab-section-selected a:hover, .section-faq-tab-section .section-faq-tab-section-selected a:focus, .section-faq-tab-section .section-faq-tab-section-selected a:visited {
@@ -1448,7 +1448,7 @@ ul.navbar-lg li:last-child a:focus {
       right: 20px;
       top: -30px; }
     .section-faq-tab-section .section-faq-tab-section-selected h5 {
-      color: #77b239;
+      color: #14ae94;
       font-size: 20px;
       font-weight: 600; }
 
@@ -2003,11 +2003,14 @@ html input[disabled] {
     padding: 30px 0; }
   .section-payment-green ul {
     padding: 0;
-    max-width: 355px; }
+    max-width: 300px; }
+  .section-payment-green ul li {
+    margin-left: 5px;
+    font-size: 11px; }
   .section-payment-green {
     padding: 10px 0; }
   .section-payment-green ul li span {
-    font-size: 13px;
+    font-size: 11px;
     padding: 0;
     border: none; }
   .section-payment-green ul li img {

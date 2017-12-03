@@ -67,7 +67,12 @@ and (orientation: landscape) {
 
     .section-payment-green ul {
         padding: 0;
-        max-width: 355px;
+        max-width: 300px;
+    }
+
+    .section-payment-green ul li {
+        margin-left: 5px;
+        font-size: 11px;
     }
 
     .section-payment-green {
@@ -75,7 +80,7 @@ and (orientation: landscape) {
     }
 
     .section-payment-green ul li span {
-        font-size: 13px;
+        font-size: 11px;
         padding: 0;
         border: none;
     }

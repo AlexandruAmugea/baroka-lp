@@ -167,7 +167,7 @@ ul.navbar-lg li:last-child a:focus {
         top: 225px;
         min-width: 500px;
         height: 50px;
-        border-bottom: 10px solid #77b239;
+        border-bottom: 10px solid $green;
         text-align: right;
         display: none;
 
@@ -184,7 +184,7 @@ ul.navbar-lg li:last-child a:focus {
         }
 
         & h5 {
-            color: #77b239;
+            color: $green;
             font-size: 20px;
             font-weight: 600;
         }
