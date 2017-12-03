@@ -1,14 +1,14 @@
 {
-  "name": "baroka",
+  "name": "buroka",
   "version": "1.0.0",
-  "description": "BUROKA MAKES IT SAFE & EASY TO BUY AND SELL BITCOIN IN NIGERIA",
+  "description": "Buroka Crypto Exchange",
   "scripts": {
     "build": "webpack --config webpack-prod.config.js --colors",
     "dev": "webpack-dev-server --open --config webpack-dev.config.js --watch --colors"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wbkd/yet-another-webpack-es6-starterkit.git"
+    "url": "git+https://github.com/AlexandruAmugea/baroka-lp/issues.git"
   },
   "keywords": [
     "Bitcoin",
@@ -48,6 +48,7 @@
     "file-loader": "^1.1.4",
     "html-webpack-plugin": "^2.17.0",
     "node-sass": "^4.1.1",
+    "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.6",
