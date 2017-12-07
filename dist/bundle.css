@@ -1758,6 +1758,25 @@ html input[disabled] {
     font-size: 32px;
     top: 6px; }
 
+.contact-form--success {
+  color: #fff;
+  font-size: 20px; }
+
+.form-control {
+  border-radius: 0px;
+  box-shadow: none;
+  border: 1px solid #fff;
+  font-size: 11px; }
+
+.form-control:focus {
+  box-shadow: none; }
+
+.form-control.ng-pristine.ng-invalid {
+  border-color: #fff; }
+
+.form-control.ng-invalid {
+  border-color: red; }
+
 .register-poup--wrapper {
   display: none;
   position: fixed;
