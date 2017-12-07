@@ -3,6 +3,12 @@ var sendEmail = function(req, res) {
     'use strict';
     var contact = req.body;
 
+    res.send(JSON.stringify({status:'200'}));
+    return;
+
+    //TODO: add the smtp server for sending the emails 
+    //TODO: remove return statement from above
+
     // Generate test SMTP service account from ethereal.email
     // Only needed if you don't have a real mail account for testing
     nodemailer.createTestAccount((err, account) => {
@@ -12,8 +18,8 @@ var sendEmail = function(req, res) {
             port: 465,
             secure: true, // use SSL
             auth: {
-                user: 'alexandruamugea@gmail.com',
-                pass: 'TEst!@34'
+                user: '',
+                pass: ''
             }
            });
     
