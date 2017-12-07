@@ -84,3 +84,17 @@
 .btn.btn-select:focus {
     box-shadow: none;
 }
+
+.btn-contact {
+    background: $green;
+    border: none;
+    display: block;
+    width: 100%;
+}
+
+
+.btn-contact:hover,
+.btn-contact:focus {
+    background-color: lighten($green , 5%);
+    transition: .25s all ease;
+}

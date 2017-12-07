@@ -150,6 +150,8 @@ html input[disabled] {
     box-shadow: none;
     border: 1px solid #fff;
     font-size: 11px;
+    padding: 8px;
+    height: auto;
 }
 
 .form-control:focus {
