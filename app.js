@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const sendEmail = require('./mvc/sendEmail.js');
 
 const port = process.env.PORT || 8080;
 
@@ -44,5 +45,7 @@ app.get('/aml-kyc-policy', function(req, res){
 app.get('/what-is-bitcoin', function(req, res){
     res.sendFile(__dirname + "/dist/what-is-bitcoin.html");
 })
+
+app.post('/contact-form', sendEmail);
 
 app.listen(port);

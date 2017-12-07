@@ -137,3 +137,31 @@ html input[disabled] {
         top: 6px;
     }
 }
+
+.contact-form--success {
+    color: #fff;
+    font-size: 20px;
+}
+
+//form-control ng-pristine ng-empty ng-valid-email ng-invalid ng-invalid-required ng-touched
+
+.form-control {
+    border-radius: 0px;
+    box-shadow: none;
+    border: 1px solid #fff;
+    font-size: 11px;
+    padding: 8px;
+    height: auto;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.form-control.ng-pristine.ng-invalid {
+     border-color: #fff;
+}
+
+.form-control.ng-invalid {
+    border-color: red;
+}

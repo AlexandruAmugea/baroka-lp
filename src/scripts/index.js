@@ -16,6 +16,7 @@ import faqTabMenu from './helpers/faqTabMenu.js';
 import headerCtrl from './controllers/headerCtrl';
 import footerCtrl from './controllers/footerCtrl';
 import exchangeFormCtrl from './controllers/exchangeFormCtrl';
+import contactFormCtrl from './controllers/contactFormCtrl';
 
 // Factories
 import exchangeFactory from './factory/exchangeFactory';
@@ -33,6 +34,7 @@ var app = angular.module('buroka', [
 ]);
 
 app.controller('headerCtrl', headerCtrl);
+app.controller('contactFormCtrl', contactFormCtrl);
 app.controller('footerCtrl', footerCtrl);
 app.controller('exchangeFormCtrl', exchangeFormCtrl);
 

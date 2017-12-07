@@ -1543,6 +1543,17 @@ ul.navbar-lg li:last-child a:focus {
 .btn.btn-select:focus {
   box-shadow: none; }
 
+.btn-contact {
+  background: #14ae94;
+  border: none;
+  display: block;
+  width: 100%; }
+
+.btn-contact:hover,
+.btn-contact:focus {
+  background-color: #17c5a7;
+  transition: .25s all ease; }
+
 .footer-links-group dt {
   color: #ffffff;
   font-weight: 400;
@@ -1757,6 +1768,27 @@ html input[disabled] {
     cursor: pointer;
     font-size: 32px;
     top: 6px; }
+
+.contact-form--success {
+  color: #fff;
+  font-size: 20px; }
+
+.form-control {
+  border-radius: 0px;
+  box-shadow: none;
+  border: 1px solid #fff;
+  font-size: 11px;
+  padding: 8px;
+  height: auto; }
+
+.form-control:focus {
+  box-shadow: none; }
+
+.form-control.ng-pristine.ng-invalid {
+  border-color: #fff; }
+
+.form-control.ng-invalid {
+  border-color: red; }
 
 .register-poup--wrapper {
   display: none;
