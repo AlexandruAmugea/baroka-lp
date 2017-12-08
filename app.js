@@ -46,6 +46,10 @@ app.get('/what-is-bitcoin', function(req, res){
     res.sendFile(__dirname + "/dist/what-is-bitcoin.html");
 })
 
+app.get('/about-us', function(req, res){
+    res.sendFile(__dirname + "/dist/about-us.html");
+})
+
 app.post('/contact-form', sendEmail);
 
 app.listen(port);

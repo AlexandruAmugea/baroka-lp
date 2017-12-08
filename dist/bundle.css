@@ -1285,6 +1285,11 @@ h1.heading-rotate-90.heading-rotate-page-faq {
   margin-top: 400px;
   font-size: 160px; }
 
+h1.heading-rotate-90.heading-page-aboutus {
+  width: 330px;
+  margin-top: 330px;
+  font-size: 86px; }
+
 h2 {
   font-size: 36px;
   color: #000000;
@@ -2228,6 +2233,8 @@ html input[disabled] {
     margin-bottom: 20px; }
   .pop-up-how {
     max-width: 250px;
-    left: calc(50% - 125px); } }
+    left: calc(50% - 125px); }
+  .form-control {
+    margin-top: 15px; } }
 
 /*# sourceMappingURL=bundle.css.map*/
