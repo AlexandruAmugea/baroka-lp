@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlexandruAmugea/baroka-lp/issues.git"
+    "url": "git+https://github.com/AlexandruAmugea/Buroka-lp/issues.git"
   },
   "keywords": [
     "Bitcoin",
@@ -18,7 +18,7 @@
   "author": "Alexandru Amugea",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AlexandruAmugea/baroka-lp/issues"
+    "url": "https://github.com/AlexandruAmugea/Buroka-lp/issues"
   },
   "eslintConfig": {
     "env": {
@@ -33,7 +33,7 @@
       "semi": 2
     }
   },
-  "homepage": "https://github.com/AlexandruAmugea/baroka-lp/blob/master/README.md",
+  "homepage": "https://github.com/AlexandruAmugea/Buroka-lp/blob/master/README.md",
   "devDependencies": {
     "angular": "^1.4.0",
     "angular-ui-bootstrap": "^2.5.0",
