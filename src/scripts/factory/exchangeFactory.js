@@ -47,8 +47,7 @@ function exchangeFactory ($http, $q) {
             {'shortName': 'XRP', 'name': 'XRP', 'imageClass': 'XRP'},
             {'shortName': 'LTC', 'name': 'Litcoin', 'imageClass': 'LTC'},
             {'shortName': 'ETH', 'name': 'Ethereum', 'imageClass': 'ETH'},
-            {'shortName': 'USD', 'name': 'US Dollar', 'imageClass': 'BTC'},
-            {'shortName': 'EUR', 'name': 'Euro', 'imageClass': 'BTC'},            
+            {'shortName': 'USD', 'name': 'US Dollar', 'imageClass': 'BTC'}         
           ]
         };
       }

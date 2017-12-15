@@ -18,7 +18,7 @@ function exchangeFormCtrl ($scope, $rootScope, exchangeFactory) {
     };
 
     $scope.changeGetCurrency = function(currency) {
-      $scope.currency.sell.selected = currency;
+      $scope.currency.get.selected = currency;
       let pair = $scope.currency.sell.selected.shortName + '|' + $scope.currency.get.selected.shortName;
       exchangeFactory.calculateCurrency(pair, $scope.input.sell).then(function(r){
         $scope.input.get = r.data.ClientReceived;
