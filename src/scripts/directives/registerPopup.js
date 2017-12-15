@@ -1,7 +1,7 @@
 const registerPopUpTpl = require('raw-loader!../views/registerPopUpTpl.html');
 
-directiveCtrl.$inject = ['$scope', '$rootScope'];
-function directiveCtrl ($scope, $rootScope) {
+directiveCtrl.$inject = ['$scope', '$rootScope', '$window'];
+function directiveCtrl ($scope, $rootScope, $window) {
     var body = document.getElementsByTagName('body')[0];
     body.addEventListener('keyup', (e) =>{
       if(e.keyCode === 27 && $scope.opened) {
@@ -27,11 +27,11 @@ function directiveCtrl ($scope, $rootScope) {
     });
 
     $scope.signIn = function(){
-      
+      $window.location.href = 'https://brka.space/login';
     };
 
     $scope.register = function(){
-
+      $window.location.href = 'https://brka.space/register';
     };
 
     $scope.close = function(){
