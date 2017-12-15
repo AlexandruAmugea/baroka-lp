@@ -28,7 +28,8 @@ function exchangeFormCtrl ($scope, $rootScope, exchangeFactory) {
     };
 
     $scope.$watch('input.sell', function(val){
-      exchangeFactory.calculateCurrency('BTC|USD', val).then(function(r){
+      let pair = $scope.currency.sell.selected.shortName + '|' + $scope.currency.get.selected.shortName;
+      exchangeFactory.calculateCurrency(pair, val).then(function(r){
         $scope.input.get = r.data.ClientReceived;
       }, function(er){
         console.log(er);
