@@ -9,14 +9,30 @@ function exchangeFormCtrl ($scope, $rootScope, exchangeFactory) {
 
     $scope.changeSellCurrency = function(currency) {
       $scope.currency.sell.selected = currency;
+      let pair = $scope.currency.sell.selected.shortName + '|' + $scope.currency.get.selected.shortName;
+      exchangeFactory.calculateCurrency(pair, $scope.input.sell).then(function(r){
+        $scope.input.get = r.data.ClientReceived;
+      }, function(er){
+        console.log(er);
+      });
     };
 
     $scope.changeGetCurrency = function(currency) {
-      $scope.currency.get.selected = currency;
+      $scope.currency.sell.selected = currency;
+      let pair = $scope.currency.sell.selected.shortName + '|' + $scope.currency.get.selected.shortName;
+      exchangeFactory.calculateCurrency(pair, $scope.input.sell).then(function(r){
+        $scope.input.get = r.data.ClientReceived;
+      }, function(er){
+        console.log(er);
+      });
     };
 
     $scope.$watch('input.sell', function(val){
-        $scope.input.get = exchangeFactory.calculateCurrency(val);
+      exchangeFactory.calculateCurrency('BTC|USD', val).then(function(r){
+        $scope.input.get = r.data.ClientReceived;
+      }, function(er){
+        console.log(er);
+      });
     });
 
     $scope.openRegisterPopup = false;
