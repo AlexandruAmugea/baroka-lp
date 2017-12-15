@@ -138,6 +138,17 @@ html input[disabled] {
     }
 }
 
+.exchange-loader {
+    position: relative;
+    width: 100%;
+    & img {
+        position: absolute;
+        left: calc(50% - 50px);
+        top: 22px;
+        width: 16px;
+    }
+}
+
 .contact-form--success {
     color: #fff;
     font-size: 20px;

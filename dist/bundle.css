@@ -1774,6 +1774,15 @@ html input[disabled] {
     font-size: 32px;
     top: 6px; }
 
+.exchange-loader {
+  position: relative;
+  width: 100%; }
+  .exchange-loader img {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: 22px;
+    width: 16px; }
+
 .contact-form--success {
   color: #fff;
   font-size: 20px; }
