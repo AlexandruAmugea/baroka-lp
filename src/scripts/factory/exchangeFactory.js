@@ -32,7 +32,7 @@ function exchangeFactory ($http, $q) {
         return {
           sell: {
             selected: {
-              'shortName': 'BTN', 
+              'shortName': 'BTC', 
               'name': 'Bitcoin',
             }
           },
