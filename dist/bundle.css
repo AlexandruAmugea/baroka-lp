@@ -1732,7 +1732,9 @@ html input[disabled] {
   background-color: #f3f3f3; }
 
 .input-wrapper .dropdown-menu {
-  min-width: 200px; }
+  min-width: 200px;
+  padding: 0;
+  margin: 0; }
 
 .input-wrapper .dropdown-menu li a span.currency-symbol {
   font-weight: 700;
@@ -1741,7 +1743,11 @@ html input[disabled] {
   width: 50px; }
 
 .input-wrapper .dropdown-menu li {
-  border-bottom: 1px solid #ededed; }
+  border-bottom: 1px solid #ededed;
+  margin: 0; }
+
+.input-wrapper .dropdown-menu li:last-child {
+  border-bottom: none; }
 
 .input-wrapper .dropdown-menu li a span.currency-img {
   margin: 0px;
