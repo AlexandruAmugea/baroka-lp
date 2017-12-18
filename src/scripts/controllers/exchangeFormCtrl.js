@@ -1,6 +1,5 @@
 exchangeFormCtrl.$inject = ['$scope', '$rootScope', 'exchangeFactory'];
 function exchangeFormCtrl ($scope, $rootScope, exchangeFactory) {
-
     $scope.currency = exchangeFactory.getCurrencies();
     $scope.input = {
       sell: 0,
@@ -9,58 +8,58 @@ function exchangeFormCtrl ($scope, $rootScope, exchangeFactory) {
     $scope.loading = false;
     $scope.initFirstTime = true;
     var timeForTypeInSeconds = 1500;
-    var formInput = document.getElementById('form-exchange-sell');
     var numberRegex = new RegExp('^[0-9]$');
     var typingTimer;
 
     var calculatePrice = function(){
-      let pair = $scope.currency.sell.selected.shortName + '|' + $scope.currency.get.selected.shortName;
-      exchangeFactory.calculateCurrency(pair, $scope.input.sell).then(function(r){
-        $scope.input.get = r.data.ClientReceived;
-        $scope.loading = false;
-      }, function(er){
-        console.log(er);
-      });
+      if($scope.currency.sell.selected.shortName.includes('USD')) {
+        console.log('includes usd');
+        let pair = $scope.currency.get.selected.shortName + '|' +  $scope.currency.sell.selected.shortName;
+        exchangeFactory.calculateCurrencyBuy(pair, $scope.input.sell).then(function(r){
+          $scope.input.get = r.data.ClientReceived;
+          $scope.loading = false;
+        }, function(er){
+          $scope.loading = false;
+          console.log('Error:');
+          console.log(er);
+        });
+      } else {
+        let pair = $scope.currency.sell.selected.shortName + '|' + $scope.currency.get.selected.shortName;
+        exchangeFactory.calculateCurrencySell(pair, $scope.input.sell).then(function(r){
+          $scope.input.get = r.data.ClientReceived;
+          $scope.loading = false;
+        }, function(er){
+          $scope.loading = false;
+          console.log('Error:');
+          console.log(er);
+        });
+      }
     };
 
     $scope.changeSellCurrency = function(currency) {
       $scope.currency.sell.selected = currency;
+      $scope.loading = true;
       calculatePrice();
     };
 
     $scope.changeGetCurrency = function(currency) {
       $scope.currency.get.selected = currency;
+      $scope.loading = true;
       calculatePrice();
     };
 
-    formInput.addEventListener('keydown', function(e){
-      if(numberRegex.test(e.key) || e.key === "Backspace") {
-        clearTimeout(typingTimer);
-      } else if(e.keyCode !== "ArrowRight" || e.keyCode !== "ArrowLeft") {
-        e.preventDefault();
-      }
-    });
-
-    formInput.addEventListener('keyup', function(e){
+    $scope.$watch('input.sell', function(val, param){
+      clearTimeout(typingTimer);
       $scope.loading = true;
-      if(numberRegex.test(e.key) || e.key === "Backspace") {
-        clearTimeout(typingTimer);
-        typingTimer = setTimeout(calculatePrice, timeForTypeInSeconds);
-      } else if(e.keyCode != "ArrowRight" || e.keyCode != "ArrowLeft"){
-        e.preventDefault();
-      };
-    });
 
-    $scope.$watch('input.sell', function(val){
       if($scope.initFirstTime) {
         $scope.initFirstTime = false;
+        $scope.loading = false;
         return; 
-      } else if(val == 0 || val == ''){
-        $scope.input.get = 0;
-        return;
-      } else {
-        //calculatePrice();
       }
+
+      typingTimer = setTimeout(calculatePrice, timeForTypeInSeconds);
+
     });
 
     $scope.openRegisterPopup = false;
@@ -68,8 +67,20 @@ function exchangeFormCtrl ($scope, $rootScope, exchangeFactory) {
       $rootScope.$emit('open:registerPopup');
     };
 
-    $scope.positons = function(){
-      $scope.input.sell = $scope.input.get;
+    $scope.changeBuySellPositions = function(){
+      if($scope.currency.sell.selected.shortName.includes('USD')) {
+        $scope.currency.all = exchangeFactory.getCurrencies().all;
+        $scope.currency.exchangeCurrency = exchangeFactory.getCurrencies().exchangeCurrency;
+        $scope.currency.sell.selected = $scope.currency.get.selected;
+        $scope.currency.get.selected = exchangeFactory.getCurrencies().exchangeCurrency[0];
+        calculatePrice();
+       } else {
+        $scope.currency.all = exchangeFactory.getCurrencies().exchangeCurrency;
+        $scope.currency.exchangeCurrency = exchangeFactory.getCurrencies().all;
+        $scope.currency.get.selected = $scope.currency.sell.selected;
+        $scope.currency.sell.selected = exchangeFactory.getCurrencies().exchangeCurrency[0];
+        calculatePrice();
+       }
     };
 
 };

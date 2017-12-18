@@ -3,16 +3,26 @@ function exchangeFactory ($http, $q) {
     var apikey = "tfplf9jpvdsm0po7hvf8k03ncm9jjfzf";
     return {
         getCurrencies: getCurrencies,
-        calculateCurrency: calculateCurrency
+        calculateCurrencySell: calculateCurrencySell,
+        calculateCurrencyBuy: calculateCurrencyBuy
       };
   
-      function calculateCurrency(pair, amount){
+      function calculateCurrencySell(pair, amount){
         let url = decodeURI('https://brka.space/api/sell/' + pair + '/' + amount + '/tfplf9jpvdsm0po7hvf8k03ncm9jjfzf');
         return $http({
           method: 'GET',
           url: url
         });
       }
+
+      function calculateCurrencyBuy(pair, amount){
+        let url = decodeURI('https://brka.space/api/buy/' + pair + '/' + amount + '/tfplf9jpvdsm0po7hvf8k03ncm9jjfzf');
+        return $http({
+          method: 'GET',
+          url: url
+        });
+      }
+  
   
       function getCurrencies(){
         return {
@@ -32,8 +42,10 @@ function exchangeFactory ($http, $q) {
             {'shortName': 'BTC', 'name': 'Bitcoin', 'imageClass': 'BTC'},
             {'shortName': 'XRP', 'name': 'XRP', 'imageClass': 'XRP'},
             {'shortName': 'LTC', 'name': 'Litcoin', 'imageClass': 'LTC'},
-            {'shortName': 'ETH', 'name': 'Ethereum', 'imageClass': 'ETH'},
-            {'shortName': 'USD', 'name': 'US Dollar', 'imageClass': 'USDT'}         
+            {'shortName': 'ETH', 'name': 'Ethereum', 'imageClass': 'ETH'},     
+          ],
+          exchangeCurrency: [
+            {'shortName': 'USD', 'name': 'US Dollar', 'imageClass': 'USDT'}    
           ]
         };
       }
