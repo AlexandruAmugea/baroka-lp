@@ -1,6 +1,6 @@
 exchangeFactory.$inject = ['$http', '$q'];
 function exchangeFactory ($http, $q) {
-    var apikey = "tfplf9jpvdsm0po7hvf8k03ncm9jjfzf";
+    const apikey = "tfplf9jpvdsm0po7hvf8k03ncm9jjfzf";
     return {
         getCurrencies: getCurrencies,
         calculateCurrencySell: calculateCurrencySell,

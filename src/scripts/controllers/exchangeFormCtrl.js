@@ -13,7 +13,6 @@ function exchangeFormCtrl ($scope, $rootScope, exchangeFactory) {
 
     var calculatePrice = function(){
       if($scope.currency.sell.selected.shortName.includes('USD')) {
-        console.log('includes usd');
         let pair = $scope.currency.get.selected.shortName + '|' +  $scope.currency.sell.selected.shortName;
         exchangeFactory.calculateCurrencyBuy(pair, $scope.input.sell).then(function(r){
           $scope.input.get = r.data.ClientReceived;
