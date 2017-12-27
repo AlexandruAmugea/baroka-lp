@@ -8,7 +8,7 @@ function exchangeFactory ($http, $q) {
       };
   
       function calculateCurrencySell(pair, amount){
-        let url = decodeURI('https://brka.space/api/sell/' + pair + '/' + amount + '/tfplf9jpvdsm0po7hvf8k03ncm9jjfzf');
+        let url = decodeURI('https://client.buroka.com/api/sell/' + pair + '/' + amount + '/tfplf9jpvdsm0po7hvf8k03ncm9jjfzf');
         return $http({
           method: 'GET',
           url: url
@@ -16,7 +16,7 @@ function exchangeFactory ($http, $q) {
       }
 
       function calculateCurrencyBuy(pair, amount){
-        let url = decodeURI('https://brka.space/api/buy/' + pair + '/' + amount + '/tfplf9jpvdsm0po7hvf8k03ncm9jjfzf');
+        let url = decodeURI('https://client.buroka.com/api/buy/' + pair + '/' + amount + '/tfplf9jpvdsm0po7hvf8k03ncm9jjfzf');
         return $http({
           method: 'GET',
           url: url

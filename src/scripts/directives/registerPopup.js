@@ -27,11 +27,11 @@ function directiveCtrl ($scope, $rootScope, $window) {
     });
 
     $scope.signIn = function(){
-      $window.location.href = 'https://brka.space/login';
+      $window.location.href = 'https://client.buroka.com/login';
     };
 
     $scope.register = function(){
-      $window.location.href = 'https://brka.space/register';
+      $window.location.href = 'https://client.buroka.com/register';
     };
 
     $scope.close = function(){
