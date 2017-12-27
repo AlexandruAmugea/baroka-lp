@@ -48,12 +48,19 @@ section.form-exchange {
     display: none;
     position: absolute;
     width: 100%;
-    top: 45%;
+    top: 0;
     color: #fff;
     font-size: 24px;
     font-weight: 700;
-    z-index: 130;
+    z-index: 100;
     text-align: center;
+
+    & img {
+        width: 95%;
+        height: auto;
+        margin-left: 2.5%;
+        margin-top: 10%;
+    }
 }
 
 .image-tile.active {
@@ -61,6 +68,12 @@ section.form-exchange {
 }
 
 .phone-wrapper {
+
+    & > img {
+        position: relative;
+        z-index: 101;
+    }
+
     position: relative;
 }
 
